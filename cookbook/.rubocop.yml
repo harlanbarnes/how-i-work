@@ -1,0 +1,29 @@
+AllCops:
+  Exclude:
+    - metadata.rb
+    - vendor/**/*
+    - test/**/*
+    - spec/**/*
+
+Encoding:
+  Enabled: false
+
+# this would normally enforces Ruby 1.9 hash syntax, i.e. foo: 'bar'
+HashSyntax:
+  Enabled: false
+
+LineLength:
+  Max: 100
+
+MethodLength:
+  Max: 30
+
+StringLiterals:
+  Enabled: false
+
+# this would normally enforce underscores in numerics , i.e. 100_123 instead of 100123
+NumericLiterals:
+  Enabled: false
+
+CyclomaticComplexity:
+  Max: 11

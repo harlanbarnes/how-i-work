@@ -1,0 +1,19 @@
+upstream backend {
+<% node['web']['backends'].each do |host| %>
+    server <%= host %>:<%= node['app']['port'] %>;
+<% end %>
+}
+
+server {
+  listen   <%= node['nginx']['port'] -%>;
+  server_name  <%= node['hostname'] %>;
+
+  access_log  <%= node['nginx']['log_dir'] %>/simple-proxy.access.log;
+
+  location / {
+    proxy_set_header X-Real-IP  $remote_addr;
+    proxy_set_header X-Forwarded-For $remote_addr;
+    proxy_set_header Host $host;
+    proxy_pass http://backend;
+  }
+}
