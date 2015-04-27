@@ -1,0 +1,72 @@
+var MarvelWidgets = MarvelWidgets || {};
+
+//Began creating utils namespace should we make a widgets class in the future. 
+MarvelWidgets.utils = (function(self){
+	self.hasProtocol = function(url){return url.search(/.*?:\/\//g) >= 0;}
+	self.removeProtocol = function(url){return url.replace(/.*?:\/\//g, '');}
+	self.extend = function(extendInto, extendable, extender){for(var key in extendable)extendInto[key] = extender[key] || extendable[key];return extendInto;}
+	self.params = function(obj){
+		var str = "";
+		for (var key in obj) {
+		    if (str != "")str += "&";
+		    str += key + "=" + obj[key];
+		}
+		return str;
+	}
+	return self;
+})(MarvelWidgets.utils || {});
+
+MarvelWidgets.video = (function (self, css, cssTagID, dox) {
+	var _utils = MarvelWidgets.utils;
+
+	if(!dox.getElementById(cssTagID)){//Create needed styles
+		var cssTag = dox.createElement("style");cssTag.type = 'text/css';
+		cssTag.id = cssTagID;dox.getElementsByTagName('head')[0].appendChild(cssTag);
+
+		if (cssTag.styleSheet)cssTag.styleSheet.cssText = css;
+		else cssTag.appendChild(document.createTextNode(css));
+	}
+	var _optDefaults = {host : 'marvel.com',protocol : false,urlParams : {}}
+	
+
+	function objectOptsToJSONParam(param, obj){
+		var str = encodeURIComponent(JSON.stringify(obj));
+		return typeof str !== "undefined" && str !== "undefined" ? "&"+param+"="+str : "&"+param;
+	}
+	/**
+	 * [create function creates the iframe that holds the video widget which supports various invocation codes using marvel id]
+	 * @param  {[Int]} id           [This is the id of the video to be fetched. ]
+	 * @param  {[Object]} opts      [This object holds those the parameters to pass in the iframe's url params string]
+	 * @property {[..Object]} [urlParams] [this property of opts holds the parameters semantically meant to be URL parameters as used by some widgets (brightcove uses url params for example)]
+	 * @param  {[Object]} noshareopts [This object allows passing of parameters to widget. These parameters however are not preset in the 'getEmbed code functionality']
+	 */
+    function create(id, opts, noshareopts){
+    	var _opts = opts || {},
+    		noshareOpts = noshareOpts || {},
+    		optsStr = objectOptsToJSONParam('opts',opts),
+    		noshareoptsStr = objectOptsToJSONParam('noshareopts',noshareopts);
+
+    	_opts = _utils.extend({},_optDefaults,_opts);
+    	
+    	//Translate host and URL to ensure proper URL along with flexibility
+    	//The url includes the route, any url params that that may trigger js functionality, and the stringified opts for get code to know what was passed
+    	var _url,
+    		_params = _utils.params(_opts.urlParams);
+  		if( _opts.protocol )_url = _opts.protocol+'://'+_utils.removeProtocol(_opts.host);//if protocol explicity specified in options
+  		else if( !_utils.hasProtocol(_opts.host) && _opts.host.substr(0,2) !== '//')_url = '//'+_opts.host;//If protocol not specified along on host option either make protocolless
+  		else _url = _opts.host;//use host as url as it includes protocol information
+  		_url = _url.replace('////', '//');//Clean in case a protocolless url was specified
+  		_url = _url+'/videowidget/'+id+'?'+_params+optsStr+noshareoptsStr;
+
+    	var _tpl = '<iframe src="http://marvel.com/i/js/'+_url+'" seamless marginheight="0" marginwidth="0" frameborder="0"></iframe>',
+    		_widget = dox.querySelector('[data-marvelwidget-video="'+id+'"]');
+    	if(_widget)_widget.innerHTML = _tpl;
+    };
+    return {create:create};
+})(
+	MarvelWidgets.video || {},
+	"div[data-marvelwidget-video],div[data-marvelwidget-video] iframe,div[data-marvelwidget-video] object{max-width:100%!important;width:100%!important;overflow:hidden!important}div[data-marvelwidget-video]{position:relative;padding-bottom:56.25%;height:0}div[data-marvelwidget-video] iframe,div[data-marvelwidget-video] object{position:absolute;top:0;width:100%!important;height:100%!important}",
+	"marvelPlayerCSS",
+	document
+);
+

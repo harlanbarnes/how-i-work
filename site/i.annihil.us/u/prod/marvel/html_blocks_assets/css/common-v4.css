@@ -1,0 +1,213 @@
+/*
+** Helper mxiins for common stylesheet rules
+*/
+/* line 3, ../../dev/css/common-v4.scss */
+.site-container {
+  z-index: 2;
+}
+
+/* line 7, ../../dev/css/common-v4.scss */
+.section-new-comics,
+.section-new-movies,
+.section-originalvids {
+  padding-bottom: 500px;
+}
+@media only screen and (min-width: 0) and (max-width: 570px) {
+  /* line 7, ../../dev/css/common-v4.scss */
+  .section-new-comics,
+  .section-new-movies,
+  .section-originalvids {
+    padding-bottom: 300px;
+  }
+}
+
+@media only screen and (min-width: 571px) {
+  /* line 16, ../../dev/css/common-v4.scss */
+  .section-new-movies ~ .module .openhtml-sublayer {
+    height: 600px;
+    top: -600px;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 570px) {
+  /* line 16, ../../dev/css/common-v4.scss */
+  .section-new-movies ~ .module .openhtml-sublayer {
+    top: -366px !important;
+  }
+}
+
+/* line 28, ../../dev/css/common-v4.scss */
+.oh-link:link, .oh-link:hover, .oh-link:visited, .oh-link:active, .oh-link:focus {
+  outline: 0;
+  text-decoration: none;
+  color: inherit !important;
+  display: block;
+}
+
+/* line 40, ../../dev/css/common-v4.scss */
+.openhtml-sublayer {
+  position: relative;
+  display: block;
+  min-width: 320px;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+/* line 47, ../../dev/css/common-v4.scss */
+.openhtml-sublayer p {
+  margin: 0;
+}
+/* line 51, ../../dev/css/common-v4.scss */
+.openhtml-sublayer .btn {
+  margin: 0 !important;
+  min-width: 120px !important;
+}
+/* line 56, ../../dev/css/common-v4.scss */
+.openhtml-sublayer .ext {
+  max-height: 100px;
+  max-width: 280px;
+  font-size: 12px;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+/* line 69, ../../dev/css/common-v4.scss */
+.openhtml-sublayer:not(.custom-block) {
+  height: 100%;
+  position: absolute;
+  top: -1px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background-position: center bottom;
+}
+/* line 79, ../../dev/css/common-v4.scss */
+.openhtml-sublayer:not(.custom-block) .site-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: auto;
+  display: block;
+  height: 100%;
+}
+/* line 88, ../../dev/css/common-v4.scss */
+.openhtml-sublayer:not(.custom-block) .site-container .oh-copy {
+  position: absolute;
+  top: auto;
+  bottom: 120px;
+  z-index: 3;
+  width: 45%;
+  max-width: 400px;
+  text-align: center;
+}
+@media only screen and (min-width: 570px) and (max-width: 800px) {
+  /* line 88, ../../dev/css/common-v4.scss */
+  .openhtml-sublayer:not(.custom-block) .site-container .oh-copy {
+    bottom: 50px;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 570px) {
+  /* line 88, ../../dev/css/common-v4.scss */
+  .openhtml-sublayer:not(.custom-block) .site-container .oh-copy {
+    bottom: 20px;
+  }
+}
+/* line 102, ../../dev/css/common-v4.scss */
+.openhtml-sublayer:not(.custom-block) .site-container .oh-copy.left {
+  left: 0;
+  right: auto;
+}
+/* line 107, ../../dev/css/common-v4.scss */
+.openhtml-sublayer:not(.custom-block) .site-container .oh-copy.right {
+  right: 0;
+  left: auto;
+}
+/* line 112, ../../dev/css/common-v4.scss */
+.openhtml-sublayer:not(.custom-block) .site-container .oh-copy.center {
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: auto;
+  width: auto;
+}
+@media only screen and (min-width: 0) and (max-width: 570px) {
+  /* line 112, ../../dev/css/common-v4.scss */
+  .openhtml-sublayer:not(.custom-block) .site-container .oh-copy.center {
+    bottom: 20px;
+    max-width: 280px;
+  }
+}
+/* line 126, ../../dev/css/common-v4.scss */
+.openhtml-sublayer:not(.custom-block) .site-container .oh-copy .copy-img {
+  background-size: contain;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+/* line 132, ../../dev/css/common-v4.scss */
+.openhtml-sublayer:not(.custom-block) .site-container .oh-copy p {
+  font-size: 20px;
+  margin: 30px auto 20px;
+  font-family: TradeGothicBold;
+}
+@media only screen and (max-width: 570px) {
+  /* line 132, ../../dev/css/common-v4.scss */
+  .openhtml-sublayer:not(.custom-block) .site-container .oh-copy p {
+    font-size: 16px;
+    line-height: 1em;
+    margin: 10px 0 20px !important;
+  }
+}
+/* line 147, ../../dev/css/common-v4.scss */
+.openhtml-sublayer.custom-block {
+  min-height: 400px;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+@media only screen and (min-width: 0) and (max-width: 570px) {
+  /* line 147, ../../dev/css/common-v4.scss */
+  .openhtml-sublayer.custom-block {
+    min-height: 350px;
+  }
+}
+/* line 50, ../../../../Tools/helpers/helpers.scss */
+.openhtml-sublayer.custom-block:before {
+  display: block !important;
+  content: "" !important;
+}
+/* line 157, ../../dev/css/common-v4.scss */
+.openhtml-sublayer.custom-block .site-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100%;
+  padding-top: 10px;
+}
+/* line 165, ../../dev/css/common-v4.scss */
+.openhtml-sublayer.custom-block .site-container .oh-copy {
+  width: 45%;
+}
+@media only screen and (min-width: 0) and (max-width: 570px) {
+  /* line 165, ../../dev/css/common-v4.scss */
+  .openhtml-sublayer.custom-block .site-container .oh-copy {
+    width: auto;
+  }
+}
+/* line 171, ../../dev/css/common-v4.scss */
+.openhtml-sublayer.custom-block .site-container .oh-copy p {
+  font-size: 20px;
+  margin-bottom: 20px !important;
+  font-family: TradeGothic;
+}
+@media only screen and (min-width: 0) and (max-width: 800px) {
+  /* line 171, ../../dev/css/common-v4.scss */
+  .openhtml-sublayer.custom-block .site-container .oh-copy p {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,1988 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html class="lt-ie9 lt-ie10 juggernaut notresponsive grid_940"> <![endif]-->
+<!--[if IE 9]> <html class="lt-ie10 juggernaut responsive grid_940"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="juggernaut responsive grid_940"> <!--<![endif]-->
+
+<head>
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+
+<script type="text/javascript">
+// <![CDATA[
+  var URLs = {
+    'login':  'https://secure.marvel.com/user/login?referer=http%3A%2F%2Fmarvel.com',
+    'signup': 'https://secure.marvel.com/user/register?referer=http%3A%2F%2Fmarvel.com',
+    'comicReader': 'http://reader.marvel.com/#/issue/',
+    'rpxWidgetUrl': 'http://widget-cdn.rpxnow.com/js/lib/forge.marvel.com/widget.js',
+    'rpxWidgetUrlSecure': 'https://rpxnow.com/js/lib/forge.marvel.com/widget.js',
+    'sitenames': {
+        marvel : 'marvel.com'
+    }
+  };
+
+ window.marvelJanrainTokenUrl = "https://marvel.com/my_account/social";
+ window.marvelJanrainAppId = "gofcnefdmbcgfcjpgide";
+ window.marvelJanrainAppUrl = "https://forge.marvel.com";
+// ]]>
+</script>
+
+        <meta name="twitter:site" content="@Marvel" />
+        <meta name="og:site_name" content="Marvel.com" />
+        <meta name="og:type" content="website" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:creator" content="@Marvel" />
+        <meta name="twitter:url" content="" />
+        <meta name="og:url" content="" />
+        <meta property="fb:app_id" content="193166954153103" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <meta name="content-type" content="text/html;charset=utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UwIPVl5UGwIAXVNaDwEA"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:23,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(4),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:10,2:9,3:7,4:11,5:3,6:24,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],6:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3),n.on("fn-start",function(t){var e=t[0];e instanceof Event&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof Event&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:10,2:9,3:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],7:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:24,2:25,ee:"QJf3ax",gos:"7eSDFh"}],8:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState"],"-")},{1:25,2:24,ee:"QJf3ax"}],9:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:25,2:24,ee:"QJf3ax"}],10:[function(t,e){function n(t,e,n){t[0]=o(t[0],"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:25,2:24,ee:"QJf3ax"}],11:[function(t,e){function n(){f.inPlace(this,p,"fn-")}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:7,2:25,ee:"QJf3ax"}],12:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=n(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c>u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:13,3:11,4:7,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],13:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],14:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:23,2:24,handle:"D5DuLP"}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=(t(2),window),f=c.document,u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-632.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:23,2:14,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],23:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],24:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],25:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:24,ee:"QJf3ax"}]},{},["G9z0Bl",4,12,6,5]);</script>
+        <meta name="robots" content="index,follow" />
+        <meta name="description" content="Enter Marvel.com, the best place to connect with other fans and get news about comics&amp;#039; greatest super-heroes: Iron Man, Thor, Captain America, the X-Men, and more." />
+        <meta name="twitter:description" content="Enter Marvel.com, the best place to connect with other fans and get news about comics&amp;#039; greatest super-heroes: Iron Man, Thor, Captain America, the X-Men, and more." />
+        <meta name="og:description" content="Enter Marvel.com, the best place to connect with other fans and get news about comics&amp;#039; greatest super-heroes: Iron Man, Thor, Captain America, the X-Men, and more." />
+        <meta name="keywords" content="Marvel, Iron Man, Thor, Captain America, Wolverine, X-Men, Avengers, news, comic books, digital comics, videos, games, movies, tv, fans, forums, downloads" />
+        <!--[if IE 8]><link rel="stylesheet" type="text/css" media="all" href="http://i.annihil.us/u/prod/marvel/s/css/b2d87b8cc308dbfaaba606f723103963.css" /><![endif]-->
+        <link rel="stylesheet" type="text/css" media="all" href="i.annihil.us/u/prod/marvel/s/css/9a863b4ff9e75581ba54a4d32a1436a9.css" />
+        <!--[if IE 8]><link rel="stylesheet" type="text/css" media="all" href="http://i.annihil.us/u/prod/marvel/s/css/64a76e28816aabe3e2527ec209c6e24b.css" /><![endif]-->
+        <link rel="stylesheet" type="text/css" media="all" href="i.annihil.us/u/prod/marvel/s/css/282ec9cb7027c668b17cd7127d2267f7.css" />
+        
+        <!--[if lte IE 9]><script type="text/javascript" src="http://i.annihil.us/u/prod/marvel/s/js/a4e10de2ebb8fc01929c19913e9636e9.js"></script><![endif]-->
+        <!--[if IE 8]><script type="text/javascript" src="http://i.annihil.us/u/prod/marvel/s/js/a34a58f2cb251dcc855a41c95c77b81e.js"></script><![endif]-->
+        <script type="text/javascript" src="i.annihil.us/u/prod/marvel/s/js/d91a36113a1eedbbf01641b932749afe.js"></script>
+        <script type="text/javascript" src="i.annihil.us/u/prod/marvel/s/js/d4815ae131cba6721c918275c7b6d8e0.js"></script>
+        
+        <title>Marvel.com: The Official Site | Iron Man, Spider-Man, Hulk, X-Men, Wolverine and the heroes of the Marvel Universe.Comics,  News, Movies and Video Games | Marvel.com</title>
+        <link href="index.html" rel="canonical" />
+        <script type="text/javascript" async="async" src="admin.brightcove.com/js/BrightcoveExperiences_all.js"></script>
+        <script type="text/javascript">
+        (function() {
+           function async_load(){
+        	 	files = new Array();
+        
+                    	for(i in files) {
+        					        s = document.createElement('script');
+        					        s.type = files[i].type;
+        					        s.async = files[i].async;
+        					        s.src = files[i].src;
+        					        var x = document.getElementsByTagName('script')[0];
+        					        x.parentNode.insertBefore(s, x);
+                		}
+        		}
+        					    if (window.attachEvent) {
+        					        window.attachEvent('onload', async_load);
+        					    } else {
+        					        window.addEventListener('load', async_load, false);
+        					    }
+        					})();
+        </script>
+        
+        <script type="text/javascript">// <![CDATA[
+         var MARVEL_USER ={"islogged":"0"}
+        	// ]]></script>
+        <script type="text/javascript">
+        var strTrackingCode = 'UA-273913-20';
+        var strUserSegment = "nonmember";
+        var strPageId = "/";
+        
+        function callAnalytics(trackingCode, userSegment, trackPage, transactionAdd, transactionItem) {
+            ga('create', trackingCode, 'auto');
+            ga('set', 'dimension1', userSegment);
+            ga('send', 'pageview', trackPage);
+            
+            if(transactionAdd != null){
+                if (transactionAdd.length > 0 && transactionItem.length > 0) {
+                    ga('require', 'ecommerce', 'ecommerce.js');
+                    ga('ecommerce:addTransaction');
+                    ga('ecommerce:addItem');
+                }
+            }
+         
+            return false;
+        }
+        
+        
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        
+        (function() {
+            callAnalytics(strTrackingCode, strUserSegment, strPageId, null, null);
+        })();
+        </script>
+        
+        <!-- Facebook retargeting pixel starts here -->
+        
+        <script type="text/javascript">
+        (function(){
+          window._fbds = window._fbds || {};
+          _fbds.pixelId = 802011856479832;
+          var fbds = document.createElement('script');
+          fbds.async = true;
+          fbds.src = '//connect.facebook.net/en_US/fbds.js';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(fbds, s);
+        })();
+        window._fbq = window._fbq || [];
+        window._fbq.push(["track", "PixelInitialized", {}]);
+        </script>
+        <noscript><img height="1" width="1" border="0" alt="" style="display:none" src="https://www.facebook.com/tr?id=802011856479832&amp;ev=NoScript" /></noscript>
+        
+        <!-- start Tealium tag here -->
+        <script type="text/javascript">
+        var utag_data = {  
+          Account_Registration : "", // Enter Variable Description 
+          Search_Term : "", // Enter Variable Description 
+          Pagename : "", // Pagename 
+          CTO_Data : "" // 
+        } 
+        </script>
+        
+        <!-- Loading script asynchronously --> 
+        <script type="text/javascript"> 
+        (function(a,b,c,d){ 
+          a='//tags.tiqcdn.com/utag/disney/marvel/prod/utag.js'; 
+          b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.a 
+          sync=true; 
+          a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a); 
+        })(); 
+        </script>
+
+<link href="https://plus.google.com/108523337373444601877/posts" rel="publisher" />
+<meta name="msapplication-TileImage" content="/i/images/logo.png" />
+
+<!--- GPT JavaScript Library -->
+<script type="text/javascript">
+ (function() {
+   var useSSL = 'https:' == document.location.protocol;
+   var src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+   document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+ })();
+</script>
+
+</head>
+    <body id="index-index" class="home">
+
+  
+<!-- FLOODLIGHT TAGS FOR RE-TARGETED ADVERTISING (REQUESTED BY DISNEY) -->
+
+<!-- 
+Start of DoubleClick Floodlight Tag: Please do not remove 
+Activity name of this tag: M_Marvel_AllPages_Impression
+URL of the webpage where the tag is expected to be placed: 
+This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag. 
+Creation Date: 08/08/2013 
+--> 
+<script type="text/javascript"> 
+var axel = Math.random() + ""; 
+var a = axel * 10000000000000; 
+document.write('<iframe src="http://3944448.fls.doubleclick.net/activityi;src=3944448;type=m_mar096;cat=m_mar451;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>'); 
+</script> 
+<noscript> 
+<iframe src="http://3944448.fls.doubleclick.net/activityi;src=3944448;type=m_mar096;cat=m_mar451;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe> 
+</noscript> 
+<!-- End of DoubleClick Floodlight Tag: Please do not remove --> 
+
+
+        
+        <script type="text/javascript">var tplToJs = tplToJs || {};tplToJs.mustache = tplToJs.mustache || {};var jsTplEngine = tplToJs.mustache;jsTplEngine.videoInPop = "<div class=\"brightcove-player-wrap\">\n    <div class=\"brightcove-player\" id=\"playermyExperience{{brightcoveId}}\">\n\n      <object id=\"myExperience{{brightcoveId}}\" class=\"BrightcoveExperience\">\n        <param name=\"bgcolor\" value=\"#2B2B2B\" \/>\n        <param name=\"width\" value=\"960\" \/>\n        <param name=\"height\" value=\"558\" \/>\n        <param name=\"scale\" value=\"exactfit\" \/>\n        <param name=\"playerID\" value=\"2235678034001\" \/>\n        <param name=\"playerKey\" value=\"AQ~~,AAAAAAr7e30~,vihvuRVBQpN2ieDtiYAsN2q5fQCSKhgJ\" \/>\n        <param name=\"isVid\" value=\"true\" \/>\n        <param name=\"isUI\" value=\"true\" \/>\n        <param name=\"dynamicStreaming\" value=\"true\" \/>\n        <param name=\"convivaEnabled\" value=\"true\" \/>\n        <param name=\"convivaID\" value=\"c3.Marvel\" \/>\n        <!-- <param name=\"@videoPlayer\" value=\"{{brightcoveId}}\" \/> -->\n        <param name=\"@videoPlayer\" value=\"{{brightcoveId}}\" \/>\n\n        <!-- Smart player params including template event handlers -->\n        <param name=\"includeAPI\" value=\"true\" \/>\n        <param name=\"templateLoadHandler\" value=\"brightcove_dpop.onTemplateLoaded\" \/>\n        <param name=\"templateReadyHandler\" value=\"brightcove_dpop.onTemplateReady\" \/>\n\n      <\/object>\n      <!--\n      This script tag will cause the Brightcove Players defined above it to be created as soon\n      as the line is read by the browser. If you wish to have the player instantiated only after\n      the rest of the HTML is processed and the page load is complete, remove the line.\n      -->\n      \n\n  <\/div>\n<\/div>";</script>
+
+<header>
+                          
+    <div class="ad ad-header">                    <!--  Operative Tag starts here -->
+                    <script type='text/javascript'>
+                      function initGoogleTagAd( networkCode, size, sect, ct, targetDiv ) {
+                        googletag.defineSlot( networkCode, size, targetDiv )
+                          .addService(googletag.pubads())
+                          .setTargeting( "sect", sect )
+                          .setTargeting( "ct", ct )
+                          .setTargeting( "mtfInline", "true" );
+                        googletag.enableServices();
+                        googletag.display( targetDiv );
+                    
+                      }
+                    </script>
+                    <div class="advertisement">
+                      <div id='div-gpt-ad-home-168854066'>
+                      <script>
+                        initGoogleTagAd( '/10281695/Marvel.com/home', [[728,90], [970,66], [970,250]], 'home', '', 'div-gpt-ad-home-168854066' );
+                      </script>
+                      </div>
+                    </div>
+                    
+                    <script type="text/javascript">
+                    <!-- Ugly hack to remove width and height from custom skins iframe -->
+                    $(document).ready(function() {
+                      setTimeout(function(){
+                        var adIframe = $('#home-skin-ad .advertisement iframe');
+                            adIframe.hide().removeAttr('width').removeAttr('height');
+                          $('#skin-ad .advertisement iframe').hide().removeAttr('width').removeAttr('height');
+                        },300);
+                    });
+                    </script>
+                    
+                    
+                    
+                    
+                    
+</div>
+  
+  
+
+<!--[if IE 8]> <div class="lt-IE9 marvelWidget_Container notresponsive"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<div class="marvelWidget_Container notresponsive">
+<!--<![endif]-->
+  <div id="marvel_topnav_wrapper" class="not_inner"> <!-- header -->
+                      <div id="marvel_topnav_search" class="marvel_search_box  closed">
+                      <form method="get" action="search/?q=">
+                        
+                        <span id="marvel_topnav_search_close" class="icon-close"></span>
+                        <div class="searchbg"></div>
+                        <div>
+                          <input type="text" name="q" class="txtSearch" id="txtSearch" tabindex="1" placeholder="SEARCH" >
+                          <select name="category" class="marvel_search_select ">
+                              <option value="All" selected>All</option>
+                              <option value="comics" >Comics</option>
+                              <option value="movies" selected>Movies</option>
+                              <option value="videos" >Videos</option>
+                              <option value="games" >Games</option>
+                              <option value="tv" >TV</option>
+                              <option value="characters" >Characters</option>
+                              <option value="news" >News</option>
+                              <option value="wallpapers" >Wallpapers</option>
+                              <option value="images" >Images</option>
+                              <option value="podcasts" >Podcasts</option>
+                          </select>
+                          <button class="btn btn-red btn-search" tabindex="2" type="submit"><span>Search</span></button>
+                        </div>
+                      </form>
+                    </div>
+                    <script>$(".marvel_search_select").customSelectMenu();</script>
+                    
+    <div id="marvel_topnav" class="not_inner">
+      <h1><a href="index.html" class="icon-marvel-logo"></a></h1>
+      <div id="marvel_topnav_mobile">
+        <span id="icon-menu" class="icon-menu _topnavicon"></span>
+        <span id="icon-search" class="icon-search _topnavicon"></span>      </div>
+      <div id="marvel_topnav_ul_wrapper">
+        <div>
+
+          <ul id="marvel_topnav_ul">
+            <li class="home"><a class="current" href="index.html">Home</a></li>
+                                    <li><a href="comics" class="">Comics</a></li>
+                    
+                                    <li><a href="movies" class="">Movies</a></li>
+                    
+                                    <li><a href="videos" class="">Videos</a></li>
+                    
+                                    <li><a href="games" class="">Games</a></li>
+                    
+                                    <li><a href="tv" class="">TV</a></li>
+                    
+                                    <li><a href="characters" class="">Characters</a></li>
+                    
+                                    <li><a href="http://shop.marvel.com" class="">Shop</a></li>
+                    
+                                <li class="dropdown-container">
+                        <a class="">More</a>
+                        <div class="dropdown more">
+                          <style><!--
+                      #marvel_topnav .linklist {
+                      padding: 0!important;
+                      width: 320px;
+                      }
+                      #marvel_topnav .linklist ul {
+                      float: none !important;
+                      width: 100%;
+                      }
+                      #marvel_topnav .linklist li {
+                      width: auto !important;
+                      text-align: center;
+                      padding: 10px 12px !important;
+                      }
+                      #marvel_topnav .linklist li:first-of-type {
+                      padding-left: 15px !important;
+                      }
+                      #marvel_topnav .linklist a {
+                      line-height: 2.2em !important;
+                      }
+                      #marvel_topnav .applist li {
+                      width: 25% !important;
+                      }
+                      #marvel_topnav .applist a {
+                      background-position: center top !important;
+                      width: auto !important;
+                      }
+                      #marvel_topnav .sociallist {
+                      padding: 5px 23px 5px 0 !important;
+                      }
+                      #marvel_topnav .sociallist > span {
+                      text-shadow: 1px 1px 3px #000;
+                      }
+                      #marvel_topnav .sociallist a span {
+                      display: block !important;
+                      }
+                    --></style>
+                    <div class="linklist">
+                    <ul>
+                    <li><a href="news/">News</a></li>
+                    <li><a href="images/">Images</a></li>
+                    <li><a href="http://more.marvel.com/">Offers</a></li>
+                    <li><a href="http://www.cafepress.com/+marvel+gifts">CafePress</a></li>
+                    </ul>
+                    </div>
+                    <div class="applist">
+                    <ul>
+                    <li><a href="mobile/#marvel_unlimited" style="background: url(i.annihil.us/u/prod/marvel/i/mg/4/20/5189670f880beb.png) no-repeat 15px 0; padding-top: 64px; width: 73px;">Marvel Unlimited</a></li>
+                    <li><a href="mobile/#marvel_comics" style="background: url(i.annihil.us/u/prod/marvel/i/mg/4/20/5189661e2df84b.png) no-repeat 15px 0; padding-top: 64px; width: 73px;">Marvel Comics</a></li>
+                    <li><a href="mobile/#marvel_ar" style="background: url(i.annihil.us/u/prod/marvel/i/mg/4/50/534e9cb867268.png) no-repeat 15px 0; padding-top: 64px; width: 73px;">Marvel AR</a></li>
+                    <li><a href="mobile/#marvel_avengers_alliance" style="background: url(i.annihil.us/u/prod/marvel/i/mg/3/40/534842d12f52e.png) no-repeat 15px 0; padding-top: 64px; width: 73px;">Avengers Alliance</a></li>
+                    </ul>
+                    </div>
+                    <div class="sociallist"><span>Follow:</span> <a href="http://www.facebook.com/Marvel" target="_blank"> <span class="icon-facebook"></span> </a> <a href="http://plus.google.com/+marvel/posts" target="_blank"> <span class="icon-google-plus"></span> </a> <a href="http://twitter.com/#!/marvel" target="_blank"> <span class="icon-twitter"></span> </a> <a href="http://marvelentertainment.tumblr.com/" target="_blank"> <span class="icon-tumblr"></span> </a> <a href="http://youtube.com/marvel" target="_blank"> <span class="icon-youtube"></span> </a> <a href="http://pinterest.com/marvelofficial/" target="_blank"> <span class="icon-pinterest"></span> </a></div>
+                        </div>
+                    </li>
+          </ul>
+
+          <ul class="right">
+                        <li id="marvel_topnav_search_button"><a><span class="icon-search _topnavicon"></span></a></li>
+                                    <li id="marvel_topnav_user_button"><a><span class="icon-account _topnavicon"></span></a>
+              <div class="dropdown signin">
+                                    <script type="text/javascript">
+                    	window.marvelJanrainTokenUrl = "https://marvel.com/my_account/social";
+                    	window.marvelJanrainAppId    = "gofcnefdmbcgfcjpgide";
+                    	window.marvelJanrainAppUrl   = "https://forge.marvel.com"
+                    </script>
+                    
+                    
+                    <div class="signedout">
+                    	<span>(Recommended)</span>
+                    	<div id="janrainEngageEmbed"></div>
+                    	<div id="janrainListener" class="janrainEngageEmbed">
+                    		<div class="btn btn-facebook"><span><span class="icon-facebook"></span>Login with Facebook</span></div>
+                    		<div class="sociallist">
+                    			<span>Or login with:</span>
+                    			<a><span class="icon-twitter"></span></a>
+                    			<a><span class="icon-googleplus"></span></a>
+                    			<a><span class="icon-yahoo"></span></a>
+                    		</div>
+                    	</div>
+                    	<div class="divider"><hr class="left"/>OR<hr class="right" /></div>
+                    
+                    	<a class="btn btn-red" href="https://secure.marvel.com/user/login?referer=http%3A%2F%2Fmarvel.com"><span>Login with marvel account </span></a>
+                    
+                    	<div class="lightdark">
+                    		<span>Need an account?</span>
+                    		<a class="btn btn-black" href="https://secure.marvel.com/user/register?referer=http%3A%2F%2Fmarvel.com"><span>Sign up</span></a>
+                    	</div>
+                    </div>
+                    
+              </div>
+            </li>
+                      </ul>
+
+        </div>
+      </div>
+    </div>
+
+  
+                      
+
+  </div> <!-- header -->
+  <hr class="marvel_topnav_hr"/>
+  </div></header>
+
+                          
+                        <div  id="homeRotator_modu" class="module moduColor_Black no-stripes textured-full"><!-- NEXT SIBLING of #homeRotator_modu inherits stripes -->
+                        
+                            <!-- MAINROTATOR DOES NOT NEED TO BE INSIDE OF MODULE CONTAINER -->
+                            <div id="homeRotator" class="JCS2 JCS2-home pwrSldr_UIWrap">
+                        
+                                <div id="home-skin-ad">
+                                    <!--  Operative Tag starts here -->
+                        <script type='text/javascript'>
+                          function initGoogleTagAd( networkCode, size, sect, ct, targetDiv ) {
+                            googletag.defineSlot( networkCode, size, targetDiv )
+                              .addService(googletag.pubads())
+                              .setTargeting( "sect", sect )
+                              .setTargeting( "ct", ct )
+                              .setTargeting( "mtfInline", "true" );
+                            googletag.enableServices();
+                            googletag.display( targetDiv );
+                        
+                          }
+                        </script>
+                        <div class="advertisement">
+                          <div id='div-gpt-ad-home-897429395'>
+                          <script>
+                            initGoogleTagAd( '/10281695/Marvel.com/home', [1000,1000], 'home', '', 'div-gpt-ad-home-897429395' );
+                          </script>
+                          </div>
+                        </div>
+                        
+                        <script type="text/javascript">
+                        <!-- Ugly hack to remove width and height from custom skins iframe -->
+                        $(document).ready(function() {
+                          setTimeout(function(){
+                            var adIframe = $('#home-skin-ad .advertisement iframe');
+                                adIframe.hide().removeAttr('width').removeAttr('height');
+                              $('#skin-ad .advertisement iframe').hide().removeAttr('width').removeAttr('height');
+                            },300);
+                        });
+                        </script>
+                        
+                        
+                        
+                        
+                        
+                                </div>
+                        
+                                <div class="slider-container">
+                                    <!-- jsSlide -->
+                                    <div class="jsSlide_Mask">
+                                        <div class="sld_realMask pwrSldr_container">
+                                            <a class="panel-lnk-screen btn-white-border js-overlay-link" href="javascript:void(0);">open slide</a>
+                                            <button id="btnRotator" class="btn btn-black btn-white-border js-overlay-btn js-overlay-btn" type="button">
+                                                <span>Video Btn Text</span>
+                                            </button>
+                                            <div class="pwrSldr_wrapper">
+                                                <div id="pwrSldr_tpl_homeSlider">
+                                                    <ul>
+                                                        <li class="pwrSldr_each">
+                        		<img src="i.annihil.us/u/prod/marvel/i/mg/f/80/54f49eb3df1ea/rotator_large_superior.jpg" alt="Marvel's Avengers: Age of Ultron" />
+                        			<a class="panel-lnk-screen" href="news/movies/24515/watch_robert_downey_jr_jeremy_renner_ring_the_opening_bell_at_the_new_york_stock_exchange_monday">open slide<!--linking overlay over gloss piece--></a>
+                        		
+                        	
+                        	<!--The stars to ring the opening bell Monday
+                        	Watch Robert Downey Jr. &amp; Jeremy Renner at the New York Stock Exchange
+                        	
+                        		news/movies/24515/watch_robert_downey_jr_jeremy_renner_ring_the_opening_bell_at_the_new_york_stock_exchange_monday
+                        		Tune in!
+                        	-->
+                        </li>
+                        
+                        <li class="pwrSldr_each">
+                        		<img src="i.annihil.us/u/prod/marvel/i/mg/8/40/55302b2b7b0da/rotator_large_superior.jpg" alt="Marvel's Avengers: Age of Ultron" />
+                        			<a class="panel-lnk-screen" href="news/movies/24500/hear_an_exclusive_interview_with_robert_downey_jr_at_grantland">open slide<!--linking overlay over gloss piece--></a>
+                        		
+                        	
+                        	<!--Marvel's Avengers: Age of Ultron comes out May 1
+                        	Hear an Exclusive Interview with Robert Downey, Jr. by Grantland
+                        	
+                        		news/movies/24500/hear_an_exclusive_interview_with_robert_downey_jr_at_grantland
+                        		Read More
+                        	-->
+                        </li>
+                        
+                        <li class="pwrSldr_each">
+                        		<img src="i.annihil.us/u/prod/marvel/i/mg/a/60/5539b66ec9d9c/rotator_large_superior.jpg" alt="Marvel teams with telltalegames" />
+                        			<a class="panel-lnk-screen" href="news/video_games/24502/marvel_teams_with_telltale_games">open slide<!--linking overlay over gloss piece--></a>
+                        		
+                        	
+                        	<!--Coming in 2017!
+                        	Something big is coming from Marvel Games
+                        	
+                        		news/video_games/24502/marvel_teams_with_telltalegames
+                        		Get ready!
+                        	-->
+                        </li>
+                        
+                        <li class="pwrSldr_each">
+                        		<img src="i.annihil.us/u/prod/marvel/i/mg/6/90/553a95caa1697/rotator_large_superior.jpg" alt="Marvel's Agents of S.H.I.E.L.D." />
+                        			<a class="panel-lnk-screen" href="videos/watch/5066">open slide<!--linking overlay over gloss piece--></a>
+                        				<button class="btn btn-black" type="button" data-dpop-marvelvideo="5066"><span>Watch a clip!</span></button>
+                        		
+                        	
+                        	<!--Catch a New 'Marvel's Agents of S.H.I.E.L.D.' Tuesday
+                        	Coulson &amp; Gonzales Unite in New 'Marvel's Agents of S.H.I.E.L.D.' Clip
+                        	Watch a clip!
+                        		news/tv/24508/coulson_gonzales_unite_in_new_marvels_agents_of_shield_clip
+                        		Get a preview!
+                        	-->
+                        </li>
+                        
+                        <li class="pwrSldr_each">
+                        		<img src="i.annihil.us/u/prod/marvel/i/mg/6/10/553a97d00c9b0/rotator_large_superior.jpg" alt="Marvel Heroes 2015 Roll Call" />
+                        			<a class="panel-lnk-screen" href="news/video_games/24507/marvel_heroes_2015_roll_call_age_of_ultron">open slide<!--linking overlay over gloss piece--></a>
+                        		
+                        	
+                        	<!--Marvel Heroes 2015 Roll Call
+                        	Vision leads Earth's Mightiest Heroes against Ultron
+                        	
+                        		news/video_games/24507/marvel_heroes_2015_roll_call_age_of_ultron
+                        		Join the game!
+                        	-->
+                        </li>
+                        
+                        
+                                                    </ul>
+                                                </div>
+                                            </div><!-- pwrSldr_wrapper-->
+                                            <div data-sld-trigger="next" class="icon-arrow-right"></div>
+                                        </div>
+                        
+                        
+                                        <div class="slider-frame">
+                                            <div class="sld_Decor_Left"></div>
+                        
+                                            <!--  Content piece-->
+                                            <div class="sld_Txt_Wrap">
+                                                <div class="jsSlide_pagination jsSlide_pagination-BODY"><!-- paging automatically inserted here--></div>
+                                                <div class="sld_inner_right_border"></div>
+                        
+                                                <div class="sld_Txt_Content">
+                                                    <!--white box template DO NOT place static content here, it will be destroyed-->
+                                                </div>
+                        
+                                                <div class="sld_Decor-Right">
+                                                    <div class="sld_Decors_Wrap">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                        
+                                    </div>
+                                </div>
+                                <div class="jsSlide_pagination jsSlide_pagination-FOOT"><!-- paging automatically inserted here--></div>
+                            </div><!--mainRotator-->
+                        
+                        
+                        
+                        
+                        
+                        
+                            <script>
+                                sld_INSTANCER.instantiate($('#pwrSldr_tpl_homeSlider'),{
+                                    data : [{"id":"8226","title":"The stars to ring the opening bell Monday","description":"Watch Robert Downey Jr. & Jeremy Renner at the New York Stock Exchange","label":"","urlText":"","panelTemplate":"1","rotatorType":"6","created":"2015-04-24 19:26:05","modified":"2015-04-24 19:29:36","img_variant":null,"releaseDate":"2015-04-24 16:28:00","publicationStartDate":"2015-04-24 16:28:00","publicationEndDate":"2099-12-31 23:59:00","publicationWeight":"50","businessUnit":"Movies","businessFamily":null,"tags":null,"content":"{\"id\":\"24515\",\"title\":\"Watch Robert Downey Jr. & Jeremy Renner Ring the Opening Bell at the New York Stock Exchange Monday\",\"isArticle\":\"1\",\"subhed\":\"The stars of Marvel's 'Avengers: Age of Ultron' to join Marvel executives at the New York Stock Exchange!\",\"description\":\"The stars of Marvel's 'Avengers: Age of Ultron' to join Marvel executives at the New York Stock Exchange!\",\"content\":\"The Avengers are coming to Wall Street, and you'll be able to see them right here on Marvel.com!<br><br>Monday morning at 9:30 AM ET, Robert Downey Jr. and Jeremy Renner, stars of Marvel's \\\"Avengers: Age of Ultron,\\\" will join Marvel Entertainment executives to ring the Opening  Bell at the NYSE, and you'll be able to watch the event yourself directly below!<br><br>Marvel Studios' biggest film yet, \\\"Avengers: Age of Ultron,\\\" hits theaters nationwide Friday, May 1.&nbsp;<span>For the latest on the film, like<\\\/span><span> \\\"<span><a target=\\\"_blank\\\" href="\\\&quot;http:\\\/\\\/www.Facebook.com\\\/avengers\\\&quot;">Avengers: Age of Ultron<\\\/a>\\\" <\\\/span>on Facebook and follow <span><a target=\\\"_blank\\\" href="\\\&quot;http:\\\/\\\/www.twitter.com\\\/avengers\\\&quot;">@Avengers<\\\/a> <\\\/span><\\\/span><span>on Twitter, and<\\\/span><span> <span><a target=\\\"_blank\\\" href="\\\&quot;http:\\\/\\\/www.fandango.com\\\/avengers\\\&quot;">get your tickets now to see it in theaters on May 1<\\\/a><\\\/span>!<\\\/span><br><br><br><iframe src="\\\&quot;http:\\\/\\\/livestream.com\\\/accounts\\\/1160789\\\/events\\\/3996782\\\/player?width=480&amp;height=270&amp;autoPlay=true&amp;mute=false\\\&quot;" scrolling=\\\"no\\\" frameborder=\\\"0\\\" height=\\\"270\\\" width=\\\"480\\\"> <\\\/iframe>\",\"displaymode\":\"blob\",\"modified\":\"2015-04-24 18:06:51\",\"created\":\"2015-04-24 17:16:36\",\"urlAnnouncement\":null,\"isAnnouncement\":\"0\",\"useParser\":\"1\",\"author\":null,\"releaseDate\":\"2015-04-24 14:49:00\",\"publicationStartDate\":\"2015-04-24 14:49:00\",\"publicationEndDate\":\"2099-12-31 23:59:00\",\"publicationWeight\":\"50\",\"viewCount\":\"1\",\"viewsThisWeek\":\"1\",\"viewsLastWeek\":\"0\",\"businessUnit\":\"Movies\",\"businessFamily\":null,\"contentGroups\":[\"Avengers: Age of Ultron\"],\"contentGroupIds\":[\"62\"],\"url\":\"\\\/news\\\/movies\\\/24515\\\/watch_robert_downey_jr_jeremy_renner_ring_the_opening_bell_at_the_new_york_stock_exchange_monday\"}","links":{"id":"13889","url":"http:\/\/marvel.com\/news\/movies\/24515\/watch_robert_downey_jr_jeremy_renner_ring_the_opening_bell_at_the_new_york_stock_exchange_monday","text":"Tune in!","order":"0","created":"2015-04-24 19:28:49","modified":"2015-04-24 19:28:49"}},{"id":"8216","title":"Marvel's Avengers: Age of Ultron comes out May 1","description":"Hear an Exclusive Interview with Robert Downey, Jr. by Grantland","label":"","urlText":"","panelTemplate":"1","rotatorType":"6","created":"2015-04-23 19:38:28","modified":"2015-04-24 09:36:00","img_variant":null,"releaseDate":"2015-04-24 09:32:00","publicationStartDate":"2015-04-24 09:32:00","publicationEndDate":"2099-12-31 23:59:00","publicationWeight":"50","businessUnit":"Movies","businessFamily":null,"tags":null,"content":"{\"id\":\"24500\",\"title\":\"Hear an Exclusive Interview with Robert Downey Jr. at Grantland\",\"isArticle\":\"1\",\"subhed\":\"Go in-depth with the man behind Tony Stark in a Grantland interview for Marvel's 'Avengers: Age of Ultron,' out May 1!\",\"description\":\"Go in-depth with the man behind Tony Stark in a Grantland interview for Marvel's 'Avengers: Age of Ultron,' out May 1!\",\"content\":\"Hear a brand-new interview with the man behind Iron Man conducted by Grantland for Marvel's \\\"Avengers: Age of Ultron\\\"! Listen to the interview below and <a href="\\\&quot;http:\\\/\\\/www.fandango.com\\\/avengers\\\&quot;" target=\\\"_blank\\\">buy tickets now<\\\/a> to see \\\"Avengers: Age of Ultron\\\" when it lands in theaters May 1.<br><br><iframe width=\\\"100%\\\" height=\\\"450\\\" frameborder=\\\"no\\\" src="\\\&quot;https:\\\/\\\/w.soundcloud.com\\\/player\\\/?url=https%3A\\\/\\\/api.soundcloud.com\\\/tracks\\\/202210789&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true\\\&quot;" scrolling=\\\"no\\\"><\\\/iframe><br><br>Gearing up for the biggest event in the Marvel Cinematic Universe yet, Robert Downey Jr. sat down with Grantland for an exclusive interview! The star of five Marvel Studios films talks about turning 50, his peers, his experiences in the Marvel Cinematic Universe and more! Learn more by listening to the interview above or <a href="\\\&quot;http:\\\/\\\/grantland.com\\\/features\\\/the-grantland-qa-robert-downey-jr\\\/\\\&quot;">reading it HERE<\\\/a>.<br><a href="\\\&quot;http:\\\/\\\/www.fandango.com\\\/avengers\\\&quot;" target=\\\"_blank\\\"><br>Purchase tickets now to \\\"Avengers: Age of Ultron\\\" when it comes to theaters May 1!<\\\/a> Follow <a href="\\\&quot;http:\\\/\\\/www.twitter.com\\\/avengers\\\&quot;" target=\\\"_blank\\\">@Avengers<\\\/a> on Twitter and like \\\"<a href="\\\&quot;http:\\\/\\\/www.Facebook.com\\\/avengers\\\&quot;" target=\\\"_blank\\\">Avengers: Age of Ultron<\\\/a>\\\" on Facebook for all the latest on Earth's Mightiest Heroes.\",\"displaymode\":\"blob\",\"modified\":\"2015-04-24 09:29:09\",\"created\":\"2015-04-23 19:09:56\",\"urlAnnouncement\":null,\"isAnnouncement\":\"0\",\"useParser\":\"1\",\"author\":\"63\",\"releaseDate\":\"2015-04-24 09:21:00\",\"publicationStartDate\":\"2015-04-24 09:21:00\",\"publicationEndDate\":\"2099-12-31 23:59:00\",\"publicationWeight\":\"50\",\"viewCount\":\"2\",\"viewsThisWeek\":\"2\",\"viewsLastWeek\":\"0\",\"businessUnit\":\"Movies\",\"businessFamily\":null,\"contentGroups\":[\"Avengers: Age of Ultron\"],\"contentGroupIds\":[\"62\"],\"url\":\"\\\/news\\\/movies\\\/24500\\\/hear_an_exclusive_interview_with_robert_downey_jr_at_grantland\"}","links":{"id":"13879","url":"http:\/\/marvel.com\/news\/movies\/24500\/hear_an_exclusive_interview_with_robert_downey_jr_at_grantland","text":"Read More","order":"0","created":"2015-04-24 09:36:00","modified":"2015-04-24 09:36:00"}},{"id":"8218","title":"Coming in 2017!","description":"Something big is coming from Marvel Games","label":"","urlText":"","panelTemplate":"1","rotatorType":"6","created":"2015-04-23 23:19:22","modified":"2015-04-23 23:31:46","img_variant":null,"releaseDate":"2015-04-23 23:21:00","publicationStartDate":"2015-04-23 23:21:00","publicationEndDate":"2099-12-31 23:59:00","publicationWeight":"50","businessUnit":"Video Games","businessFamily":null,"tags":null,"content":"{\"id\":\"24502\",\"title\":\"Marvel Teams with Telltale Games\",\"isArticle\":\"1\",\"subhed\":\"Coming in 2017!\",\"description\":\"Coming in 2017!\",\"content\":\"<img class=\\\"editor marvelimage centered\\\" data-type=\\\"marvelimage\\\" data-align=\\\"centered\\\" data-id=\\\"997460\\\" data-variant=\\\"background\\\" data-width=\\\"633\\\" data-height=\\\"537\\\" data-src=\\\"http:\\\/\\\/i.annihil.us\\\/u\\\/prod\\\/marvel\\\/i\\\/mg\\\/a\\\/10\\\/5539b57c2cef9\\\/background.jpg\\\" src="\\\&quot;\\\&quot;"><br>\",\"displaymode\":\"blob\",\"modified\":\"2015-04-24 00:04:42\",\"created\":\"2015-04-23 23:14:06\",\"urlAnnouncement\":null,\"isAnnouncement\":\"0\",\"useParser\":\"1\",\"author\":null,\"releaseDate\":\"2015-04-23 23:18:00\",\"publicationStartDate\":\"2015-04-23 23:18:00\",\"publicationEndDate\":\"2099-12-31 23:59:00\",\"publicationWeight\":\"50\",\"viewCount\":\"1\",\"viewsThisWeek\":\"1\",\"viewsLastWeek\":\"0\",\"businessUnit\":\"Video Games\",\"businessFamily\":null,\"contentGroups\":null,\"contentGroupIds\":null,\"url\":\"\\\/news\\\/video_games\\\/24502\\\/marvel_teams_with_telltale_games\"}","links":{"id":"13876","url":"http:\/\/marvel.com\/news\/video_games\/24502\/marvel_teams_with_telltalegames","text":"Get ready!","order":"0","created":"2015-04-23 23:21:05","modified":"2015-04-23 23:21:05"}},{"id":"6031","title":"Catch a New 'Marvel's Agents of S.H.I.E.L.D.' Tuesday","description":"Coulson & Gonzales Unite in New 'Marvel's Agents of S.H.I.E.L.D.' Clip","label":"","urlText":"Watch a clip!","panelTemplate":"1","rotatorType":"6","created":"2013-09-24 23:26:40","modified":"2015-04-24 15:15:39","img_variant":null,"releaseDate":"2014-09-25 12:58:00","publicationStartDate":"2014-09-25 12:58:00","publicationEndDate":"2099-12-31 23:59:00","publicationWeight":"50","businessUnit":"Movies & TV","businessFamily":null,"tags":null,"content":"{\"id\":\"5066\",\"title\":\"Marvel's Agents of S.H.I.E.L.D. Season 2, Ep. 19 - Clip 1\",\"description\":\"Coulson and Gonzales (special guest star Edward James Olmos) must put aside their differences and learn to trust one another in a clip from the next all-new \\\"Marvel's Agents of S.H.I.E.L.D.,\\\" premiering Tuesday, April 28 at 9:00 PM ET!\",\"contentGroupList\":null,\"duration\":\"95\",\"brightcoveId\":\"4194202635001\",\"invocation\":\"\",\"releaseDate\":\"2015-04-24 12:08:00\",\"type\":\"clip\",\"group\":\"tv series\",\"video_type_id\":\"3\",\"publicationStartDate\":\"2015-04-24 12:08:00\",\"publicationEndDate\":\"2099-12-31 23:59:00\",\"publicationWeight\":\"50\",\"hasFutureReleaseDate\":\"0\",\"viewCount\":\"5\",\"viewsThisWeek\":\"5\",\"viewsLastWeek\":\"0\",\"ratingCount\":\"0\",\"ratingAverage\":\"0.00\",\"businessUnit\":\"TV\",\"businessFamily\":null,\"tags\":[\"Clark Gregg\",\"Edward James Olmos\",\"Marvel Cinematic Universe\",\"Marvel's Agents of S.H.I.E.L.D.\"],\"contentGroups\":[\"Marvel's Agents of S.H.I.E.L.D.\"],\"contentGroupIds\":[\"424\"],\"url\":\"\\\/videos\\\/watch\\\/5066\"}","links":{"id":"13883","url":"http:\/\/marvel.com\/news\/tv\/24508\/coulson_gonzales_unite_in_new_marvels_agents_of_shield_clip","text":"Get a preview!","order":"0","created":"2015-04-24 15:14:46","modified":"2015-04-24 15:14:48"}},{"id":"8220","title":"Marvel Heroes 2015 Roll Call","description":"Vision leads Earth's Mightiest Heroes against Ultron","label":"","urlText":"","panelTemplate":"1","rotatorType":"6","created":"2015-04-24 15:21:13","modified":"2015-04-24 15:33:28","img_variant":null,"content":"{\"id\":\"24507\",\"title\":\"Marvel Heroes 2015 Roll Call: Age of Ultron\",\"isArticle\":\"1\",\"subhed\":\"Vision leads the Avengers against the mechanical menace in the Marvel MMO!\",\"description\":\"Vision leads the Avengers against the mechanical menace in the Marvel MMO!\",\"content\":\"<p>Ultron walks the world of <a href="\\\&quot;http:\\\/\\\/marvel.com\\\/games\\\/139\\\/marvel_heroes_2015\\\&quot;">&#8220;Marvel Heroes 2015,&#8221;<\\\/a> an unstoppable steel titan intent only on grinding Earth&#8217;s fleshy denizens to dust!<\\\/p>\\r\\n<p>Gazillion&#8217;s Creative Designer and Community Manager Ryan Collins breaks down the game&#8217;s upcoming Age of Ultron event and all the goodies coming with it&#8230;<\\\/p>\\r\\n<p><b>Marvel.com: The Age of Ultron is upon us! You guys have prepared some incredible stuff for players to celebrate the coming of our robotic overlord. First on the list are tons of free playable characters!<\\\/b><b><\\\/b><\\\/p>\\r\\n<p><b>Ryan Collins:<\\\/b> Yes! We&#8217;re allowing players to play as the core six Avengers for free&#8212;Captain America, Iron Man, Thor, Hulk, Hawkeye, Black Widow&#8212;which means that Iron Man, Thor and Hulk are all free for the first time!<\\\/p>\\r\\n<p><b>Marvel.com: And as if being able to play as Earth&#8217;s Mightiest Heroes wasn&#8217;t enough, the Vision is making his grand debut! Can you tell us a little about the android Avenger and all his undoubtedly awesome abilities?<\\\/b><b><\\\/b><\\\/p>\\r\\n<p><b>Ryan Collins:<\\\/b> Vision will be launching as our 47th playable hero just in time for the release of <a href="\\\&quot;http:\\\/\\\/marvel.com\\\/movies\\\/movie\\\/193\\\/avengers_age_of_ultron\\\&quot;">&#8220;Avengers: Age of Ultron.&#8221;<\\\/a> Vision is definitely a kitchen sink type of hero: he can do it all. He can use his Density Shift to switch between a high-density form and a phasing form, allowing him to either be slow and hard hitting or fast and very mobile with his melee powers. The Density Shift alone is a super cool mechanic, as it actually switches out his melee-focused powers for a completely different set of powers. But that&#8217;s not all. Vision has an entire tree dedicated to his Solar Gem, which ties directly into his primary resource, Solar Power. Vision uses the Solar Gem to blast enemies from a distance with focused single-target attacks, big area of effect powers, and just about everything you&#8217;d expect from a solar-slinging synthezoid.<img class=\\\"editor marveldynamicgallery\\\" src="\\\&quot;\\\&quot;" data-src=\\\"\\\/js\\\/tiny_mce\\\/plugins\\\/marveldynamicgallery\\\/img\\\/marveldynamicgalleryplaceholdercentered.jpg\\\" data-type=\\\"marveldynamicgallery\\\" title=\\\"Age of Ultron in &quot;Marvel Heroes 2015&quot;\\\" data-title=\\\"Age of Ultron in &quot;Marvel Heroes 2015&quot;\\\"><\\\/p>\\r\\n<p>While that may seem like a pretty decked out kit, Vision also features the ability to hack the A.I. of robot enemies in &#8220;Marvel Heroes.&#8221; This allows Vision to have a metal minion to assist him in combat, and he can even &#8220;Overclock&#8221; their CPUs and cause them to deal more damage or even explode.<\\\/p>\\r\\n<p><b>Marvel.com: Then comes the Age of Ultron game mode, not for the weak of heart. What are players gonna need to do to bring down the metal monstrosity?<\\\/b><b><\\\/b><\\\/p>\\r\\n<p><b>Ryan Collins:<\\\/b> Friends! But seriously, the Age of Ultron game mode is a fast-paced five-player game mode that requires level 60 heroes. Unlike our Raid zones, though, you don&#8217;t have to be incredibly geared out to participate&#8212;but knowing how to work as a team and play your hero well is imperative. The rewards in the game mode actually improve based on how fast you complete each wave, so while you may be able to complete it on your first try, it will take practice and careful gearing to ensure you can get the &#8220;gold&#8221; reward in every phase!<\\\/p>\\r\\n<p><b>Marvel.com: And his shiny steel lackeys aren't restricted to Ultron game mode correct?<\\\/b><b><\\\/b><\\\/p>\\r\\n<p><b>Ryan Collins:<\\\/b> Nope! The Ultron Sentries will also appear in our Midtown Patrol and Industry City Patrol zones; Ultron is attacking all of New York in &#8220;Marvel Heroes,&#8221; and it&#8217;s important that we represent that!<img class=\\\"editor marvelvideo centered\\\" src="\\\&quot;\\\&quot;" data-src=\\\"http:\\\/\\\/i.annihil.us\\\/u\\\/prod\\\/marvel\\\/i\\\/mg\\\/3\\\/b0\\\/553a85e32936c.jpg\\\" title=\\\"Age of Ultron Comes to Marvel Heroes 2015\\\" data-type=\\\"marvelvideo\\\" data-align=\\\"centered\\\" data-id=\\\"5065\\\" data-title=\\\"Age of Ultron Comes to Marvel Heroes 2015\\\" data-urltext=\\\"Watch now!\\\" data-urllink=\\\"http:\\\/\\\/marvel.com\\\/videos\\\/watch\\\/5065\\\/age_of_ultron_comes_to_marvel_heroes_2015\\\"><\\\/p>\\r\\n<p><b>Marvel.com: I&#8217;ve also heard that there were a few character design reviews planned? Who&#8217;s getting the special treatment?<\\\/b><b><\\\/b><\\\/p>\\r\\n<p><b>Ryan Collins:<\\\/b> As always, right? Hawkeye and Black Widow will both be getting an upgrade in power, and Scarlet Witch&#8217;s Level 52 Design Review is also coming up very soon.<\\\/p>\\r\\n<p><b>Marvel.com: Is there anything else on deck the team wants to talk about?<\\\/b><b><\\\/b><\\\/p>\\r\\n<p><b>Ryan Collins:<\\\/b> In addition to all of the &#8220;Avengers: Age of Ultron&#8221;-inspired content, we&#8217;re also putting the finishing touches on our Achievement system which is due to ship fairly soon! We&#8217;re in the final stages of testing and bug fixing, and it&#8217;s one of the most exciting features we've ever launched that will give players something to do for quite some time!<\\\/p>\\r\\n<p><i>Stay tuned to Marvel.com for more <a href="\\\&quot;http:\\\/\\\/marvel.com\\\/games\\\/139\\\/marvel_heroes_2015\\\&quot;">&#8220;Marvel Heroes 2015&#8221;<\\\/a> news!<\\\/i><\\\/p>\",\"displaymode\":\"blob\",\"modified\":\"2015-04-24 15:14:51\",\"created\":\"2015-04-24 14:18:43\",\"urlAnnouncement\":null,\"isAnnouncement\":\"0\",\"useParser\":\"1\",\"url\":\"\\\/news\\\/video_games\\\/24507\\\/marvel_heroes_2015_roll_call_age_of_ultron\",\"author\":\"46\",\"releaseDate\":\"2015-04-24 15:00:00\",\"publicationStartDate\":\"2015-04-24 15:00:00\",\"publicationEndDate\":\"2099-12-31 23:59:00\",\"publicationWeight\":\"50\",\"viewCount\":\"1\",\"viewsThisWeek\":\"1\",\"viewsLastWeek\":\"0\",\"businessUnit\":\"Video Games\",\"businessFamily\":null,\"contentGroups\":[\"Marvel Heroes MMO\",\"Marvel Games: Age of Ultron\"],\"contentGroupIds\":[\"350\",\"966\"]}","links":{"id":"13885","url":"http:\/\/marvel.com\/news\/video_games\/24507\/marvel_heroes_2015_roll_call_age_of_ultron","text":"Join the game!","order":"0","created":"2015-04-24 15:22:39","modified":"2015-04-24 15:22:39"},"image":{},"releaseDate":"2015-04-24 15:22:00","publicationStartDate":"2015-04-24 15:22:00","publicationEndDate":"2099-12-31 23:59:00","publicationWeight":"50","businessUnit":"Video Games","businessFamily":null,"tags":null}],
+                                    template : 'homeRotator'
+                                });
+                        
+                            </script>
+                        
+                        </div><!-- /module -->
+                        
+                    
+                    <!-- Movie module start here -->
+                    <div class="module-group">
+                          <div id="pod_movies_feature" class="module moduColor_Black section-new-movies big-header section-new-movies-w-video">
+                          <div class="site-container">
+                            <h1 class="module-header">
+                                Marvel's Avengers: Age of Ultron
+                                <a href="movies/movie/193/avengers_age_of_ultron" class="see-all">See More</a>
+                            </h1>
+                        
+                              <div class="row-item media-item media-item-realvid-feature">
+                        
+                                
+                                <div class="row-item-image row-item-image-url">
+                                  <div class="row-item-image-border">
+                                      <div class="dimensionVidWrap">
+                                      <div data-marvelwidget-video="4983">
+                        	<script src="i/js/marvelvideo.js.html"></script>
+                        	<script>
+                        		MarvelWidgets.video.create('4983',
+                        			{
+                        				'host':'marvel.com',
+                        			}
+                        			,{
+                        				'playerId':'2238117388001','playerOptions':'&quot;&quot;',
+                        			 }
+                        		);</script>
+                        </div>
+                                      </div>
+                        
+                                    
+                                  </div>
+                                </div>
+                        
+                                <div class="row-item-text">
+                                  <span class="media-item-group">Avengers: Age of Ultron</span>
+                                    <span class="media-item-date">Mar 4, 2015</span>
+                        
+                                  <h5><a class="meta-title" href="videos/watch/4983">Marvel's Avengers: Age of Ultron - Trailer 3</a></h5>
+                                  <!-- span>Ultron lays out his plans for decimating Earth's Mightiest Heroes in the latest ...</span -->
+                                  <p class="row-item-prodline">2:09 | trailer</p>
+                                </div><!-- /row-item-text -->
+                              </div>
+                        
+                        
+                            <h2 class="sub-header">More Avengers</h2>
+                            <!-- jsSlide -->
+                            <div class="pwrSldr_container JCS1 JCS1-media pwrSldr_scrollable">
+                              <a href="index.html#" class="pwrSldr_btn _prev"><span>Previous</span></a>
+                              <a href="index.html#" class="pwrSldr_btn _next"><span>Next</span></a>
+                        
+                              <div class="pwrSldr_wrapper">
+                                <div id="movie-marquee">
+                                  <ul>
+                                    <li><div class="row-item media-item">
+                            
+                            <div class="row-item-image">
+                        	    <a href="videos/watch/5049" class="row-item-image-url">
+                        	    	<div class="row-item-image-border"></div>
+                                	<img src='x.annihil.us/u/prod/marvel/i/mg/4/10/552e91456c7d8/landscape_xlarge.jpg' title="Age of Ultron Clip 5" alt="Age of Ultron Clip 5" />
+                                	<i class="media-item-type media-item-video"></i>
+                        	    </a>			
+                          	</div>
+                            
+                          	<div class="row-item-text">
+                                <span class="media-item-group">Avengers: Age of Ultron</span>
+                                	<span class="media-item-date">Apr 15, 2015</span>
+                        
+                            <h5><a class="meta-title" href="videos/watch/5049">Marvel's Avengers: Age of Ultron - Clip 5</a></h5>
+                            <p class="media-item-meta">
+                              1:23 
+                               |  
+                              clip
+                            </p>
+                          </div>
+                        </div></li><li><div class="row-item media-item ">
+                            
+                            <div class="row-item-image">
+                        	    <a href="images/gallery/gallery/355/14_new_images_from_marvels_avengers_age_of_ultron_assemble" class="row-item-image-url">
+                        	    	<div class="row-item-image-border"></div>
+                                        <img src='x.annihil.us/u/prod/marvel/i/mg/c/20/552d90cca71cf/landscape_xlarge.jpg' title="Age of Ultron 14 New Images" alt="Age of Ultron 14 New Images" />
+                        			
+                        			<i class="media-item-type media-item-img"></i>
+                        	    </a>			
+                          	</div>
+                            
+                          	<div class="row-item-text">
+                                <span class="media-item-group">Avengers: Age of Ultron</span>
+                                <span class="media-item-date">Apr 14, 2015</span>
+                        
+                                <h5><a class="meta-title" href="images/gallery/gallery/355/14_new_images_from_marvels_avengers_age_of_ultron_assemble">14 New Images from Marvel's 'Avengers: Age of Ultron' Assemble</a></h5>
+                                <p class="media-item-meta">14 Images</p>
+                        	</div>
+                        </div></li>
+                                  </ul>
+                        
+                                </div><!-- /pwrSldr -->
+                              </div><!--  /pwrSldr_wrapper -->
+                            </div><!-- /pwrSldr_container -->
+                        
+                          </div><!-- /site-container -->
+                        </div><!-- /module -->
+                        
+                        <script>
+                          $('#movie-marquee').pwrSldr();
+                        </script>
+                        
+                      <div class="module moduColor_Black">
+                        <div class="site-container">
+                              <h2 class="sub-header">
+                          Movie Buzz
+                          
+                          <a href="movies" class="see-all">More in Movies</a>
+                        </h2>
+                        <div class="pwrSldr_container JCS1 JCS1-video JCS1-media" id="">
+                            <a href="index.html#" class="pwrSldr_btn _prev"><span></span></a>
+                            <a href="index.html#" class="pwrSldr_btn _next"><span></span></a>
+                            <div class="pwrSldr_wrapper">
+                                <div id="" class="pwrSldr">
+                                    <ul><li><div class="row-item media-item">
+                            
+                            <div class="row-item-image">
+                        	    <a href="videos/watch/4983" class="row-item-image-url">
+                        	    	<div class="row-item-image-border"></div>
+                                	<img src='i.annihil.us/u/prod/marvel/i/mg/3/d0/54f73a147975a/landscape_xlarge.jpg' title="Marvel's Avengers: Age of Ultron" alt="Marvel's Avengers: Age of Ultron" />
+                                	<i class="media-item-type media-item-video"></i>
+                        	    </a>			
+                          	</div>
+                            
+                          	<div class="row-item-text">
+                                <span class="media-item-group">Avengers: Age of Ultron</span>
+                                	<span class="media-item-date">Mar 4, 2015</span>
+                        
+                            <h5><a class="meta-title" href="videos/watch/4983">Marvel's Avengers: Age of Ultron - Trailer 3</a></h5>
+                            <p class="media-item-meta">
+                              2:09 
+                               |  
+                              trailer
+                            </p>
+                          </div>
+                        </div></li><li><div class="row-item media-item">
+                            
+                            <div class="row-item-image">
+                                
+                                <a href="news/movies/24062/sony_pictures_entertainment_brings_marvel_studios_into_the_amazing_world_of_spider-man" class="row-item-image-url">
+                                	<div class="row-item-image-border"></div>
+                        	        <img src='x.annihil.us/u/prod/marvel/i/mg/9/d0/54d93e46ebd09/landscape_xlarge.jpg' title="Spider-Man" alt="Spider-Man" />
+                        			<i class="media-item-type media-item-story"></i>
+                        	    </a>
+                          	</div>
+                            
+                          	<div class="row-item-text">
+                                    <span class="media-item-group">Marvel Cinematic Universe</span>
+                                	<span class="media-item-date">Feb 9, 2015</span>
+                        
+                                <h5><a href="news/movies/24062/sony_pictures_entertainment_brings_marvel_studios_into_the_amazing_world_of_spider-man">Sony Pictures Entertainment Brings Marvel Studios Into The Amazing...</a></h5>
+                        	</div>
+                        </div></li><li><div class="row-item media-item">
+                            
+                            <div class="row-item-image">
+                        	    <a href="videos/watch/5016" class="row-item-image-url">
+                        	    	<div class="row-item-image-border"></div>
+                                	<img src='i.annihil.us/u/prod/marvel/i/mg/3/a0/5515e77151c9c/landscape_xlarge.jpg' title="AoU Twins" alt="AoU Twins" />
+                                	<i class="media-item-type media-item-video"></i>
+                        	    </a>			
+                          	</div>
+                            
+                          	<div class="row-item-text">
+                                <span class="media-item-group">Avengers: Age of Ultron</span>
+                                	<span class="media-item-date">Mar 29, 2015</span>
+                        
+                            <h5><a class="meta-title" href="videos/watch/5016">Marvel's Avengers: Age of Ultron - Meet Quicksilver & the Scarlet...</a></h5>
+                            <p class="media-item-meta">
+                              1:15 
+                               |  
+                              behind the scenes
+                            </p>
+                          </div>
+                        </div></li></ul>
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                        	var options = {};
+                        
+                        	PwrSldrInstantiator.run(options);
+                        </script>
+                        
+                        </div>
+                    
+                        <div id="openHTML_movies" class="openhtml-sublayer">
+                              
+                        <style type="text/css"><!--
+                          #pod_movies_feature {
+                            background-color: #132530;
+                          }
+                          #pod_movies_feature:before {
+                            content: none !important;
+                          }
+                          #pod_movies_feature {
+                            background-color: #132530 !important; /* Movies are fancy, we can set a custom color */
+                          }
+                          #pod_movies_feature ~ .module:not(:first-of-type) {
+                            background-color: #071923 !important;
+                          }
+                          .section-new-movies ~ .module .copy-img:not(.date) {
+                            background-image: url("i.annihil.us/u/prod/marvel/html_blocks_assets/logos/avenaou022715.png");
+                            height: 125px;
+                          }
+                          .section-new-movies ~ .module .copy-img.date {
+                            background-image: url("i.annihil.us/u/prod/marvel/html_blocks_assets/logos/avenaou-date.png");
+                            height: 40px;
+                            margin-bottom: 20px;
+                          }
+                        
+                          .section-new-movies ~ .module .oh-copy p {
+                            text-shadow: 1px 1px 1px #000000;
+                            margin-bottom: 10px !important;
+                            max-width: 320px;
+                          }
+                        
+                          .section-new-movies ~ .module .openhtml-sublayer {
+                            background-image: url("i.annihil.us/u/prod/marvel/i/mg/3/30/551c2ad529751.jpg"); /* Large */
+                          }
+                        
+                          @media only screen and (min-width: 571px) and (max-width: 960px) {
+                            .responsive .section-new-movies ~ .module .openhtml-sublayer {
+                              background-image: url("i.annihil.us/u/prod/marvel/i/mg/e/b0/551c2aea5bac8.jpg"); /* Mid */
+                            }
+                          }
+                        
+                          @media only screen and (min-width: 0) and (max-width: 570px) {
+                            .responsive .section-new-movies ~ .module .openhtml-sublayer {
+                              background-image: url("i.annihil.us/u/prod/marvel/i/mg/5/d0/551c2b0077c5d.jpg"); /* Small */
+                            }
+                            .responsive .section-new-movies ~ .module .oh-copy p {
+                              margin-bottom: 10px !important;
+                            }
+                            .responsive .section-new-movies ~ .module .oh-copy .copy-img:not(.date) {
+                              height: 60px !important;
+                            }
+                            .responsive .section-new-movies ~ .module .oh-copy .copy-img.date {
+                              margin-bottom: 10px;
+                              height: 25px;
+                            }
+                          }
+                        --></style>
+                        <a class="oh-link" target="_blank" href="http://www.fandango.com/avengers">
+                        <div class="site-container">
+                        <div class="oh-copy right">
+                        <div class="copy-img"></div>
+                        <p>Earth's Mightiest Heroes reunite against their biggest threat yet!</p>
+                        <div class="copy-img date"></div>
+                        <button class="btn btn-red btn-small"><span>Get Your Tickets Now</span></button></div>
+                        </div>
+                        </a>
+                        
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- Comics module start here -->
+                    <div class="module moduColor_Light section-new-comics big-header">
+                      <div class="site-container">
+                            <div class="JCS1-wSlantWrap JCS">
+                          <h1 class="module-header">
+                            
+                            New Comics
+                            
+                        
+                        <a href="comics" class="see-all" >More in Comics</a>
+                        
+                          </h1>
+                        
+                          <div class="pwrSldr_container JCS1 JCS1-comic_issue JCS1-portraitXl" id="asd">
+                              <a href="index.html#" class="pwrSldr_btn _prev"><span></span></a>
+                              <a href="index.html#" class="pwrSldr_btn _next"><span></span></a>
+                             	<div class="pwrSldr_wrapper">
+                                     <div id="test" class="pwrSldr">
+                                          <ul><li><div class="row-item comic-item">
+                        
+                        	<div class="row-item-image">
+                        		<a href="comics/issue/53589/true_believers_miles_morales_2015_1" class="row-item-image-url"><!--
+                        		 --><!--
+                        		  --><div class="row-item-image-border"></div><!--
+                        		  --><img src="i.annihil.us/u/prod/marvel/i/mg/5/d0/54d3c0109f6b1/portrait_incredible.jpg" alt="True Believers: Miles Morales #1 " title="True Believers: Miles Morales #1 " /><!--
+                        	 --></a>
+                            </div>
+                        
+                            <div class="row-item-text">
+                        
+                        
+                        
+                        
+                                <h5><a class="meta-title" href="comics/issue/53589/true_believers_miles_morales_2015_1">
+                        	                True Believers: Miles Morales #1 
+                                </a></h5>
+                            </div>
+                        
+                        </div>
+                        </li><li><div class="row-item comic-item">
+                        
+                        	<div class="row-item-image">
+                        		<a href="comics/issue/53583/true_believers_age_of_ultron_2015_1" class="row-item-image-url"><!--
+                        		 --><!--
+                        		  --><div class="row-item-image-border"></div><!--
+                        		  --><img src="i.annihil.us/u/prod/marvel/i/mg/f/50/54d3beaba75f7/portrait_incredible.jpg" alt="True Believers: Age of Ultron #1 " title="True Believers: Age of Ultron #1 " /><!--
+                        	 --></a>
+                            </div>
+                        
+                            <div class="row-item-text">
+                        
+                        
+                        
+                        
+                                <h5><a class="meta-title" href="comics/issue/53583/true_believers_age_of_ultron_2015_1">
+                        	                True Believers: Age of Ultron #1 
+                                </a></h5>
+                            </div>
+                        
+                        </div>
+                        </li><li><div class="row-item comic-item">
+                        
+                        	<div class="row-item-image">
+                        		<a href="comics/issue/53559/powers_firsts_2015_1" class="row-item-image-url"><!--
+                        		 --><!--
+                        		  --><div class="row-item-image-border"></div><!--
+                        		  --><img src="x.annihil.us/u/prod/marvel/i/mg/4/00/54b952e5e8175/portrait_incredible.jpg" alt="Powers Firsts #1 " title="Powers Firsts #1 " /><!--
+                        	 --></a>
+                            </div>
+                        
+                            <div class="row-item-text">
+                        
+                        
+                        
+                        
+                                <h5><a class="meta-title" href="comics/issue/53559/powers_firsts_2015_1">
+                        	                Powers Firsts #1 
+                                </a></h5>
+                            </div>
+                        
+                        </div>
+                        </li><li><div class="row-item comic-item">
+                        
+                        	<div class="row-item-image">
+                        		<a href="comics/issue/52943/x-men_2013_26" class="row-item-image-url"><!--
+                        		 --><!--
+                        		  --><div class="row-item-image-border"></div><!--
+                        		  --><img src="x.annihil.us/u/prod/marvel/i/mg/9/00/54d3c3b044f5d/portrait_incredible.jpg" alt="X-Men #26 " title="X-Men #26 " /><!--
+                        	 --></a>
+                            </div>
+                        
+                            <div class="row-item-text">
+                        
+                        
+                        
+                        
+                                <h5><a class="meta-title" href="comics/issue/52943/x-men_2013_26">
+                        	                X-Men #26 
+                                </a></h5>
+                                        <p class="meta-creators"><a href="comics/creators/9371/roland_boschi" >Boschi</a>, <a href="comics/creators/277/terry_dodson" >Dodson</a></p>
+                            </div>
+                        
+                        </div>
+                        </li><li><div class="row-item comic-item">
+                        
+                        	<div class="row-item-image">
+                        		<a href="comics/issue/52930/wolverines_2015_16" class="row-item-image-url"><!--
+                        		 --><!--
+                        		  --><div class="row-item-image-border"></div><!--
+                        		  --><img src="x.annihil.us/u/prod/marvel/i/mg/5/f0/54d3c22d3a564/portrait_incredible.jpg" alt="Wolverines #16 " title="Wolverines #16 " /><!--
+                        	 --></a>
+                            </div>
+                        
+                            <div class="row-item-text">
+                        
+                        
+                        
+                        
+                                <h5><a class="meta-title" href="comics/issue/52930/wolverines_2015_16">
+                        	                Wolverines #16 
+                                </a></h5>
+                                        <p class="meta-creators"><a href="comics/creators/12371/charles_soule" >Soule</a>, <a href="comics/creators/12492/ario_anindito" >Anindito</a></p>
+                            </div>
+                        
+                        </div>
+                        </li><li><div class="row-item comic-item">
+                        
+                        	<div class="row-item-image">
+                        		<a href="comics/issue/52744/superior_iron_man_2014_8" class="row-item-image-url"><!--
+                        		 --><!--
+                        		  --><div class="row-item-image-border"></div><!--
+                        		  --><img src="x.annihil.us/u/prod/marvel/i/mg/3/80/552e81c51f833/portrait_incredible.jpg" alt="Superior Iron Man #8 " title="Superior Iron Man #8 " /><!--
+                        	 --></a>
+                            </div>
+                        
+                            <div class="row-item-text">
+                        
+                        
+                        
+                        
+                                <h5><a class="meta-title" href="comics/issue/52744/superior_iron_man_2014_8">
+                        	                Superior Iron Man #8 
+                                </a></h5>
+                            </div>
+                        
+                        </div>
+                        </li><li><div class="row-item comic-item">
+                        
+                        	<div class="row-item-image">
+                        		<a href="comics/issue/52553/spider-man_the_x-men_2014_6" class="row-item-image-url"><!--
+                        		 --><!--
+                        		  --><div class="row-item-image-border"></div><!--
+                        		  --><img src="x.annihil.us/u/prod/marvel/i/mg/5/03/552e7106e9151/portrait_incredible.jpg" alt="Spider-Man &amp; the X-Men #6 " title="Spider-Man &amp; the X-Men #6 " /><!--
+                        	 --></a>
+                            </div>
+                        
+                            <div class="row-item-text">
+                        
+                        
+                        
+                        
+                                <h5><a class="meta-title" href="comics/issue/52553/spider-man_the_x-men_2014_6">
+                        	                Spider-Man & the X-Men #6 
+                                </a></h5>
+                            </div>
+                        
+                        </div>
+                        </li><li><div class="row-item comic-item">
+                        
+                        	<div class="row-item-image">
+                        		<a href="comics/issue/52498/silk_2015_3" class="row-item-image-url"><!--
+                        		 --><!--
+                        		  --><div class="row-item-image-border"></div><!--
+                        		  --><img src="i.annihil.us/u/prod/marvel/i/mg/2/40/54cbbdc46fc3f/portrait_incredible.jpg" alt="Silk #3 " title="Silk #3 " /><!--
+                        	 --></a>
+                            </div>
+                        
+                            <div class="row-item-text">
+                        
+                        
+                        
+                        
+                                <h5><a class="meta-title" href="comics/issue/52498/silk_2015_3">
+                        	                Silk #3 
+                                </a></h5>
+                                        <p class="meta-creators"><a href="comics/creators/12444/robbie_thompson" >Thompson</a>, <a href="comics/creators/12437/stacy_lee" >Lee</a></p>
+                            </div>
+                        
+                        </div>
+                        </li><li><div class="row-item comic-item">
+                        
+                        	<div class="row-item-image">
+                        		<a href="comics/issue/52443/secret_avengers_2014_15" class="row-item-image-url"><!--
+                        		 --><!--
+                        		  --><div class="row-item-image-border"></div><!--
+                        		  --><img src="x.annihil.us/u/prod/marvel/i/mg/7/03/5538032e172d9/portrait_incredible.jpg" alt="Secret Avengers #15 " title="Secret Avengers #15 " /><!--
+                        	 --></a>
+                            </div>
+                        
+                            <div class="row-item-text">
+                        
+                        
+                        
+                        
+                                <h5><a class="meta-title" href="comics/issue/52443/secret_avengers_2014_15">
+                        	                Secret Avengers #15 
+                                </a></h5>
+                                        <p class="meta-creators"><a href="comics/creators/12394/ales_kot" >Kot</a>, <a href="comics/creators/11930/tradd_thomas_moore" >Moore</a></p>
+                            </div>
+                        
+                        </div>
+                        </li><li><div class="row-item comic-item">
+                        
+                        	<div class="row-item-image">
+                        		<a href="comics/issue/52428/shield_2014_5" class="row-item-image-url"><!--
+                        		 --><!--
+                        		  --><div class="row-item-image-border"></div><!--
+                        		  --><img src="i.annihil.us/u/prod/marvel/i/mg/9/a0/5537fbbe8062f/portrait_incredible.jpg" alt="S.H.I.E.L.D. #5 " title="S.H.I.E.L.D. #5 " /><!--
+                        	 --></a>
+                            </div>
+                        
+                            <div class="row-item-text">
+                        
+                        
+                        
+                        
+                                <h5><a class="meta-title" href="comics/issue/52428/shield_2014_5">
+                        	                S.H.I.E.L.D. #5 
+                                </a></h5>
+                                        <p class="meta-creators"><a href="comics/creators/119/mark_waid" >Waid</a>, <a href="comics/creators/11488/julian_totino_tedesco" >Tedesco</a></p>
+                            </div>
+                        
+                        </div>
+                        </li><li><div class="row-item comic-item">
+                        
+                        	<div class="row-item-image">
+                        		<a href="comics/issue/52372/princess_leia_2015_3" class="row-item-image-url"><!--
+                        		 --><!--
+                        		  --><div class="row-item-image-border"></div><!--
+                        		  --><img src="x.annihil.us/u/prod/marvel/i/mg/9/b0/5536b349edcd5/portrait_incredible.jpg" alt="Princess Leia #3 " title="Princess Leia #3 " /><!--
+                        	 --></a>
+                            </div>
+                        
+                            <div class="row-item-text">
+                        
+                        
+                        
+                        
+                                <h5><a class="meta-title" href="comics/issue/52372/princess_leia_2015_3">
+                        	                Princess Leia #3 
+                                </a></h5>
+                                        <p class="meta-creators"><a href="comics/creators/119/mark_waid" >Waid</a>, <a href="comics/creators/277/terry_dodson" >Dodson</a></p>
+                            </div>
+                        
+                        </div>
+                        </li><li><div class="row-item comic-item">
+                        
+                        	<div class="row-item-image">
+                        		<a href="comics/issue/52349/powers_2014_3" class="row-item-image-url"><!--
+                        		 --><!--
+                        		  --><div class="row-item-image-border"></div><!--
+                        		  --><img src="x.annihil.us/u/prod/marvel/i/mg/5/10/54a1ba10039d1/portrait_incredible.jpg" alt="Powers #3 " title="Powers #3 " /><!--
+                        	 --></a>
+                            </div>
+                        
+                            <div class="row-item-text">
+                        
+                        
+                        
+                        
+                                <h5><a class="meta-title" href="comics/issue/52349/powers_2014_3">
+                        	                Powers #3 
+                                </a></h5>
+                                        <p class="meta-creators"><a href="comics/creators/24/brian_michael_bendis" >Bendis</a>, <a href="comics/creators/1433/mike_avon_oeming" >Oeming</a></p>
+                            </div>
+                        
+                        </div>
+                        </li><li><div class="row-item comic-item">
+                        
+                        	<div class="row-item-image">
+                        		<a href="comics/issue/52296/nova_2013_30" class="row-item-image-url"><!--
+                        		 --><!--
+                        		  --><div class="row-item-image-border"></div><!--
+                        		  --><img src="x.annihil.us/u/prod/marvel/i/mg/6/80/5537f2f9cc312/portrait_incredible.jpg" alt="Nova #30 " title="Nova #30 " /><!--
+                        	 --></a>
+                            </div>
+                        
+                            <div class="row-item-text">
+                        
+                        
+                        
+                        
+                                <h5><a class="meta-title" href="comics/issue/52296/nova_2013_30">
+                        	                Nova #30 
+                                </a></h5>
+                                        <p class="meta-creators"><a href="comics/creators/11680/gerry_duggan" >Duggan</a>, <a href="comics/creators/12467/orphans_cheeps" >Cheeps</a></p>
+                            </div>
+                        
+                        </div>
+                        </li><li><div class="row-item comic-item">
+                        
+                        	<div class="row-item-image">
+                        		<a href="comics/issue/52275/new_avengers_ultron_forever_2015_1" class="row-item-image-url"><!--
+                        		 --><!--
+                        		  --><div class="row-item-image-border"></div><!--
+                        		  --><img src="x.annihil.us/u/prod/marvel/i/mg/6/80/5537dcd045f54/portrait_incredible.jpg" alt="New Avengers: Ultron Forever #1 " title="New Avengers: Ultron Forever #1 " /><!--
+                        	 --></a>
+                            </div>
+                        
+                            <div class="row-item-text">
+                        
+                        
+                        
+                        
+                                <h5><a class="meta-title" href="comics/issue/52275/new_avengers_ultron_forever_2015_1">
+                        	                New Avengers: Ultron Forever #1 
+                                </a></h5>
+                                        <p class="meta-creators"><a href="comics/creators/12174/al_ewing" >Ewing</a>, <a href="comics/creators/16/alan_davis" >Davis</a></p>
+                            </div>
+                        
+                        </div>
+                        </li><li><div class="row-item comic-item">
+                        
+                        	<div class="row-item-image">
+                        		<a href="comics/issue/52267/new_avengers_2013_33" class="row-item-image-url"><!--
+                        		 --><!--
+                        		  --><div class="row-item-image-border"></div><!--
+                        		  --><img src="x.annihil.us/u/prod/marvel/i/mg/7/10/552e8ee78b219/portrait_incredible.jpg" alt="New Avengers #33 " title="New Avengers #33 " /><!--
+                        	 --></a>
+                            </div>
+                        
+                            <div class="row-item-text">
+                        
+                        
+                        
+                        
+                                <h5><a class="meta-title" href="comics/issue/52267/new_avengers_2013_33">
+                        	                New Avengers #33 
+                                </a></h5>
+                                        <p class="meta-creators"><a href="comics/creators/11743/jonathan_hickman" >Hickman</a>, <a href="comics/creators/8404/dustin_weaver" >Weaver</a></p>
+                            </div>
+                        
+                        </div>
+                        </li><li><div class="row-item comic-item">
+                        
+                        	<div class="row-item-image">
+                        		<a href="comics/issue/52236/moon_knight_2014_14" class="row-item-image-url"><!--
+                        		 --><!--
+                        		  --><div class="row-item-image-border"></div><!--
+                        		  --><img src="x.annihil.us/u/prod/marvel/i/mg/3/70/5537cd62311f8/portrait_incredible.jpg" alt="Moon Knight #14 " title="Moon Knight #14 " /><!--
+                        	 --></a>
+                            </div>
+                        
+                            <div class="row-item-text">
+                        
+                        
+                        
+                        
+                                <h5><a class="meta-title" href="comics/issue/52236/moon_knight_2014_14">
+                        	                Moon Knight #14 
+                                </a></h5>
+                                        <p class="meta-creators"><a href="comics/creators/10023/cullen_bunn" >Bunn</a>, <a href="comics/creators/11354/declan_shalvey" >Shalvey</a></p>
+                            </div>
+                        
+                        </div>
+                        </li><li><div class="row-item comic-item">
+                        
+                        	<div class="row-item-image">
+                        		<a href="comics/issue/52213/max_ride_first_flight_2015_2" class="row-item-image-url"><!--
+                        		 --><!--
+                        		  --><div class="row-item-image-border"></div><!--
+                        		  --><img src="x.annihil.us/u/prod/marvel/i/mg/1/00/552e773d71548/portrait_incredible.jpg" alt="Max Ride: First Flight #2 " title="Max Ride: First Flight #2 " /><!--
+                        	 --></a>
+                            </div>
+                        
+                            <div class="row-item-text">
+                        
+                        
+                        
+                        
+                                <h5><a class="meta-title" href="comics/issue/52213/max_ride_first_flight_2015_2">
+                        	                Max Ride: First Flight #2 
+                                </a></h5>
+                                        <p class="meta-creators"><a href="comics/creators/12441/marguerite_bennett" >Bennett</a>, <a href="comics/creators/10785/stephanie_hans" >Hans</a></p>
+                            </div>
+                        
+                        </div>
+                        </li><li><div class="row-item comic-item">
+                        
+                        	<div class="row-item-image">
+                        		<a href="comics/issue/52184/marvel_universe_ultimate_spider-man_web_warriors_2014_6" class="row-item-image-url"><!--
+                        		 --><!--
+                        		  --><div class="row-item-image-border"></div><!--
+                        		  --><img src="i.annihil.us/u/prod/marvel/i/mg/4/60/552e97629c74e/portrait_incredible.jpg" alt="MARVEL UNIVERSE ULTIMATE SPIDER-MAN: WEB WARRIORS #6 " title="MARVEL UNIVERSE ULTIMATE SPIDER-MAN: WEB WARRIORS #6 " /><!--
+                        	 --></a>
+                            </div>
+                        
+                            <div class="row-item-text">
+                        
+                        
+                        
+                        
+                                <h5><a class="meta-title" href="comics/issue/52184/marvel_universe_ultimate_spider-man_web_warriors_2014_6">
+                        	                MARVEL UNIVERSE ULTIMATE SPIDER-MAN: WEB WARRIORS #6 
+                                </a></h5>
+                                        <p class="meta-creators"><a href="comics/creators/5251/joe_caramagna" >Caramagna</a></p>
+                            </div>
+                        
+                        </div>
+                        </li><li><div class="row-item comic-item">
+                        
+                        	<div class="row-item-image">
+                        		<a href="comics/issue/51988/inhuman_2014_14" class="row-item-image-url"><!--
+                        		 --><!--
+                        		  --><div class="row-item-image-border"></div><!--
+                        		  --><img src="x.annihil.us/u/prod/marvel/i/mg/4/60/553697c91d3f8/portrait_incredible.jpg" alt="Inhuman #14 " title="Inhuman #14 " /><!--
+                        	 --></a>
+                            </div>
+                        
+                            <div class="row-item-text">
+                        
+                        
+                        
+                        
+                                <h5><a class="meta-title" href="comics/issue/51988/inhuman_2014_14">
+                        	                Inhuman #14 
+                                </a></h5>
+                                        <p class="meta-creators"><a href="comics/creators/12371/charles_soule" >Soule</a>, <a href="comics/creators/1156/ryan_stegman" >Stegman</a></p>
+                            </div>
+                        
+                        </div>
+                        </li><li><div class="row-item comic-item">
+                        
+                        	<div class="row-item-image">
+                        		<a href="comics/issue/51824/fantastic_four_2014_645" class="row-item-image-url"><!--
+                        		 --><!--
+                        		  --><div class="row-item-image-border"></div><!--
+                        		  --><img src="x.annihil.us/u/prod/marvel/i/mg/d/60/553688a083105/portrait_incredible.jpg" alt="Fantastic Four #645 " title="Fantastic Four #645 " /><!--
+                        	 --></a>
+                            </div>
+                        
+                            <div class="row-item-text">
+                        
+                        
+                        
+                        
+                                <h5><a class="meta-title" href="comics/issue/51824/fantastic_four_2014_645">
+                        	                Fantastic Four #645 
+                                </a></h5>
+                                        <p class="meta-creators"><a href="comics/creators/1340/james_robinson" >Robinson</a>, <a href="comics/creators/820/leonard_kirk" >Kirk</a></p>
+                            </div>
+                        
+                        </div>
+                        </li><li><div class="row-item comic-item">
+                        
+                        	<div class="row-item-image">
+                        		<a href="comics/issue/51614/daredevil_2014_15" class="row-item-image-url"><!--
+                        		 --><!--
+                        		  --><div class="row-item-image-border"></div><!--
+                        		  --><img src="i.annihil.us/u/prod/marvel/i/mg/9/80/55367e88aac0c/portrait_incredible.jpg" alt="Daredevil #15 " title="Daredevil #15 " /><!--
+                        	 --></a>
+                            </div>
+                        
+                            <div class="row-item-text">
+                        
+                        
+                        
+                        
+                                <h5><a class="meta-title" href="comics/issue/51614/daredevil_2014_15">
+                        	                Daredevil #15 
+                                </a></h5>
+                                        <p class="meta-creators"><a href="comics/creators/119/mark_waid" >Waid</a>, <a href="comics/creators/8221/chris_samnee" >Samnee</a></p>
+                            </div>
+                        
+                        </div>
+                        </li><li><div class="row-item comic-item">
+                        
+                        	<div class="row-item-image">
+                        		<a href="comics/issue/51607/daredevil_2014_15.1" class="row-item-image-url"><!--
+                        		 --><!--
+                        		  --><div class="row-item-image-border"></div><!--
+                        		  --><img src="x.annihil.us/u/prod/marvel/i/mg/4/00/54d3c67f27349/portrait_incredible.jpg" alt="Daredevil #15.1 " title="Daredevil #15.1 " /><!--
+                        	 --></a>
+                            </div>
+                        
+                            <div class="row-item-text">
+                        
+                        
+                        
+                        
+                                <h5><a class="meta-title" href="comics/issue/51607/daredevil_2014_15.1">
+                        	                Daredevil #15.1 
+                                </a></h5>
+                                        <p class="meta-creators"><a href="comics/creators/644/marc_guggenheim" >Guggenheim</a>, <a href="comics/creators/8221/chris_samnee" >Samnee</a></p>
+                            </div>
+                        
+                        </div>
+                        </li><!--/jsSlide_each--></ul>
+                                     </div>
+                             	</div>
+                          </div>
+                          <div class="_nxt">
+                          </div>
+                          <div class="ad_container">
+                          	<div class="ad"><!--  Operative Tag starts here -->
+                        <script type='text/javascript'>
+                          function initGoogleTagAd( networkCode, size, sect, ct, targetDiv ) {
+                            googletag.defineSlot( networkCode, size, targetDiv )
+                              .addService(googletag.pubads())
+                              .setTargeting( "sect", sect )
+                              .setTargeting( "ct", ct )
+                              .setTargeting( "mtfInline", "true" );
+                            googletag.enableServices();
+                            googletag.display( targetDiv );
+                        
+                          }
+                        </script>
+                        <div class="advertisement">
+                          <div id='div-gpt-ad-home-1653965769'>
+                          <script>
+                            initGoogleTagAd( '/10281695/Marvel.com/home', [300,250], 'home', '', 'div-gpt-ad-home-1653965769' );
+                          </script>
+                          </div>
+                        </div>
+                        
+                        <script type="text/javascript">
+                        <!-- Ugly hack to remove width and height from custom skins iframe -->
+                        $(document).ready(function() {
+                          setTimeout(function(){
+                            var adIframe = $('#home-skin-ad .advertisement iframe');
+                                adIframe.hide().removeAttr('width').removeAttr('height');
+                              $('#skin-ad .advertisement iframe').hide().removeAttr('width').removeAttr('height');
+                            },300);
+                        });
+                        </script>
+                        
+                        
+                        
+                        
+                        </div>
+                          </div>
+                        
+                        
+                        
+                          <script>
+                            //instantiate slider
+                            var h = new JM01($('#asd .pwrSldr'));
+                            h.i();
+                          </script>
+                        
+                        </div>
+                        
+                        
+                            <h2 class="sub-header">
+                          Comics Buzz
+                          
+                        </h2>
+                        
+                        <div class="pwrSldr_container JCS1 JCS1-video JCS1-media" id="">
+                            <a href="index.html#" class="pwrSldr_btn _prev"><span></span></a>
+                            <a href="index.html#" class="pwrSldr_btn _next"><span></span></a>
+                            <div class="pwrSldr_wrapper">
+                                <div id="" class="pwrSldr">
+                                    <ul><li><div class="row-item media-item">
+                            
+                            <div class="row-item-image">
+                        	    <a href="videos/watch/5062" class="row-item-image-url">
+                        	    	<div class="row-item-image-border"></div>
+                                	<img src='x.annihil.us/u/prod/marvel/i/mg/3/40/55390a47ba905/landscape_xlarge.jpg' title="Super Powers Found in Life at the Limits" alt="Super Powers Found in Life at the Limits" />
+                                	<i class="media-item-type media-item-video"></i>
+                        	    </a>			
+                          	</div>
+                            
+                          	<div class="row-item-text">
+                                <span class="media-item-group">Marvel Science</span>
+                                	<span class="media-item-date">Apr 23, 2015</span>
+                        
+                            <h5><a class="meta-title" href="videos/watch/5062">Super Powers Found in Life at the Limits</a></h5>
+                            <p class="media-item-meta">
+                              1:59 
+                               |  
+                              generic
+                            </p>
+                          </div>
+                        </div></li><li><div class="row-item media-item">
+                            
+                            <div class="row-item-image">
+                        	    <a href="/files/podcasts/mcom_this_week_marvel_182.mp3" class="row-item-image-url">
+                        	    	<div class="row-item-image-border"></div>
+                                	<img src='i.annihil.us/u/prod/marvel/i/mg/1/40/553945424bf99/landscape_xlarge.jpg' title="#182 - Black Vortex, Inhumans, Squirrel Girl" alt="#182 - Black Vortex, Inhumans, Squirrel Girl" />
+                                	<i class="media-item-type media-item-audio"></i>
+                        	    </a>
+                          	</div>
+                            
+                          	<div class="row-item-text">
+                                <span class="media-item-group">This Week in Marvel</span>
+                            	
+                        		<h5><a  class="meta-title" href="/files/podcasts/mcom_this_week_marvel_182.mp3">#182 - Black Vortex, Inhumans, Squirrel Girl</a></h5>
+                                <p class="media-item-meta">1:21:22</p>
+                        	</div>
+                        </div></li><li><div class="row-item media-item">
+                            
+                            <div class="row-item-image">
+                        	    <a href="cards/84/an_x-men_anniversary" class="row-item-image-url">
+                        	    	<div class="row-item-image-border"></div>
+                        	        	<img src='x.annihil.us/u/prod/marvel/i/mg/d/a0/553919451550e/landscape_xlarge.jpg' title="An X-Men Anniversary" alt="An X-Men Anniversary" />
+                        	    </a>			
+                          	</div>
+                            
+                          	<div class="row-item-text">
+                                <span class="media-item-group">X-Men</span>
+                        
+                            	<h5><a class="meta-title" href="cards/84/an_x-men_anniversary">An X-Men Anniversary</a></h5>
+                        	</div>
+                        </div></li></ul>
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                        	var options = {};
+                        
+                        	PwrSldrInstantiator.run(options);
+                        </script>
+                        
+                      </div><!-- /site-container -->
+                      <div id="openHTML_newreleases" class="openhtml-sublayer">
+                            
+                        <!-- Fixes -->
+                        <style><!--
+                          .module-group .section-new-movies:before {
+                            display: block !important;
+                            content: '' !important;
+                          }
+                        
+                          .section-new-comics .ad_container .ad {
+                            border: 1px solid #cdcdcd;
+                          }
+                        
+                          @media only screen and (max-width: 1104px) {
+                            .section-new-comics .ad_container {
+                              margin: 20px auto 30px;
+                            }
+                          }
+                        
+                          @media only screen and (min-width: 400px) and (max-width: 1104px) {
+                            .section-new-comics .ad_container {
+                              width: 100%;
+                              height: auto !important;
+                              border: 1px solid #cdcdcd;
+                              background: #ededed;
+                              text-align: center;
+                            }
+                        
+                            .section-new-comics .ad_container .ad {
+                              width: 300px;
+                              height: 250px;
+                              margin: 20px auto 10px;
+                            }
+                        
+                            .section-new-comics .ad_container .ad:before {
+                              color: #818181 !important;
+                            }
+                          }
+                        
+                          #pod_movies_feature > .site-container > h1 a {
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                          }
+                        
+                          @media only screen and (min-width: 570px) {
+                            #pod_movies_feature > .site-container > h1 {
+                              padding-right: 130px;
+                            }
+                            #pod_movies_feature + script + .module,
+                            #pod_movies_feature + .module {
+                              overflow: visible !important;
+                            }
+                          }
+                        
+                          @media only screen and (min-width: 800px) {
+                            html .module.big-header .module-header,
+                            html .page-header {
+                              font-size: 37px;
+                            }
+                            html .module.big-header .module-header a,
+                            html .page-header a {
+                              font-size: 24px;
+                            }
+                            #movie-marquee .row-item-text h5 {
+                              font-size: 15px;
+                            }
+                          }
+                        --></style>
+                        <link rel="stylesheet" type="text/css" href="i.annihil.us/u/prod/marvel/html_blocks_assets/css/common-v4.css" />
+                        <style type="text/css"><!--
+                        .section-new-comics .oh-copy {
+                          max-width: 281px !important;
+                          width: 40% !important;
+                        }
+                        .section-new-comics .copy-img {
+                          background-image: url("i.annihil.us/u/prod/marvel/html_blocks_assets/logos/starwarsmu.png");
+                          height: 181px;
+                          margin-bottom: 30px;
+                        }
+                        .section-new-comics .openhtml-sublayer {
+                          background-image: url("i.annihil.us/u/prod/marvel/i/mg/f/03/552e7875342a8.jpg");
+                        }
+                        @media only screen and (min-width: 600px){
+                          .responsive .section-new-comics .oh-copy span {
+                            display: block;
+                          }
+                        }
+                        @media only screen and (min-width: 571px) and (max-width: 960px) {
+                          .responsive .section-new-comics .openhtml-sublayer {
+                            background-image: url("i.annihil.us/u/prod/marvel/i/mg/3/f0/552e7894e4b06.jpg");
+                          }
+                          .section-new-comics .oh-copy {
+                            bottom: 120px !important;
+                          }
+                        }
+                        @media only screen and (min-width: 0px) and (max-width: 570px) {
+                          .responsive .section-new-comics .openhtml-sublayer {
+                            background-image: url("i.annihil.us/u/prod/marvel/i/mg/c/80/552e78c1dea5d.jpg");
+                          }
+                          .section-new-comics .oh-copy {
+                            bottom: 90px !important;
+                          }
+                        }
+                        --></style>
+                        <a class="oh-link" target="_blank" href="starwars?utm_source=MarvelHP&amp;utm_medium=OpenHTML&amp;utm_content=StartNow_CS&amp;utm_campaign=StarWars">
+                        <div class="site-container">
+                        <div class="oh-copy left">
+                        <div class="copy-img"></div>
+                        <button class="btn btn-red btn-small"><span>Learn More</span></button></div>
+                        </div>
+                        </a>
+                        
+                      </div>
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                    <div class="module moduColor_Light section-originalvids big-header">
+                      <div class="site-container">
+                            <h1 class="module-header">
+                          Marvel TV &amp; Animation
+                          
+                        </h1>
+                        <div class="pwrSldr_container JCS1 JCS1-video JCS1-media" id="">
+                            <a href="index.html#" class="pwrSldr_btn _prev"><span></span></a>
+                            <a href="index.html#" class="pwrSldr_btn _next"><span></span></a>
+                            <div class="pwrSldr_wrapper">
+                                <div id="" class="pwrSldr">
+                                    <ul><li><div class="row-item media-item">
+                            
+                            <div class="row-item-image">
+                        	    <a href="videos/watch/4992" class="row-item-image-url">
+                        	    	<div class="row-item-image-border"></div>
+                                	<img src='x.annihil.us/u/prod/marvel/i/mg/7/20/54fe47ee92175/landscape_xlarge.jpg' title="Marvel's Daredevil" alt="Marvel's Daredevil" />
+                                	<i class="media-item-type media-item-video"></i>
+                        	    </a>			
+                          	</div>
+                            
+                          	<div class="row-item-text">
+                                <span class="media-item-group">Daredevil (Netflix)</span>
+                                	<span class="media-item-date">Mar 10, 2015</span>
+                        
+                            <h5><a class="meta-title" href="videos/watch/4992">Marvel's Daredevil - Trailer 2</a></h5>
+                            <p class="media-item-meta">
+                              trailer
+                            </p>
+                          </div>
+                        </div></li><li><div class="row-item media-item">
+                            
+                            <div class="row-item-image">
+                                
+                                <a href="news/tv/24155/marvels_agents_of_shield_unleashes_the_art_of_evolution" class="row-item-image-url">
+                                	<div class="row-item-image-border"></div>
+                        	        <img src='i.annihil.us/u/prod/marvel/i/mg/3/c0/54ef972932a06/landscape_xlarge.jpg' title="Marvel's Agents of S.H.I.E.L.D.: The Art of Evolution" alt="Marvel's Agents of S.H.I.E.L.D.: The Art of Evolution" />
+                        			<i class="media-item-type media-item-story"></i>
+                        	    </a>
+                          	</div>
+                            
+                          	<div class="row-item-text">
+                                    <span class="media-item-group">Marvel's Agents of S.H.I.E.L.D.</span><span class="media-item-group">Marvel's Agents of S.H.I.E.L.D.</span>
+                                	<span class="media-item-date">Feb 26, 2015</span>
+                        
+                                <h5><a href="news/tv/24155/marvels_agents_of_shield_unleashes_the_art_of_evolution">Marvel's Agents of S.H.I.E.L.D. Unleashes the Art of Evolution</a></h5>
+                        	</div>
+                        </div></li><li><div class="row-item media-item">
+                            
+                            <div class="row-item-image">
+                                
+                                <a href="news/tv/24343/eccc_2015_ultron_comes_to_marvels_avengers_assemble_and_much_more" class="row-item-image-url">
+                                	<div class="row-item-image-border"></div>
+                        	        <img src='x.annihil.us/u/prod/marvel/i/mg/6/20/5515f3e3ee042/landscape_xlarge.jpg' title="ECCC animation panel" alt="ECCC animation panel" />
+                        			<i class="media-item-type media-item-story"></i>
+                        	    </a>
+                          	</div>
+                            
+                          	<div class="row-item-text">
+                                    <span class="media-item-group">Marvel's Avengers Assemble</span><span class="media-item-group">Marvel's Avengers Assemble</span><span class="media-item-group">Marvel's Avengers Assemble</span>
+                                	<span class="media-item-date">Mar 29, 2015</span>
+                        
+                                <h5><a href="news/tv/24343/eccc_2015_ultron_comes_to_marvels_avengers_assemble_and_much_more">ECCC 2015: Ultron Comes to 'Marvel's Avengers Assemble' and Much More</a></h5>
+                        	</div>
+                        </div></li></ul>
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                        	var options = {};
+                        
+                        	PwrSldrInstantiator.run(options);
+                        </script>
+                        
+                      </div>
+                      <div id="openHTML_originalvids" class="openhtml-sublayer">
+                            
+                        <style type="text/css"><!--
+                         .section-originalvids .copy-img { background-image: url("i.annihil.us/u/prod/marvel/html_blocks_assets/logos/shield-light.png"); height: 125px; } .section-originalvids .openhtml-sublayer { background-image: url("i.annihil.us/u/prod/marvel/i/mg/a/03/551c2b9727833.jpg"); /* Large */ } @media only screen and (min-width: 571px) and (max-width: 960px) { .responsive .section-originalvids .openhtml-sublayer { background-image: url("i.annihil.us/u/prod/marvel/i/mg/5/d0/551c2bab95234.jpg"); /* Mid */ } } @media only screen and (min-width: 0) and (max-width: 570px) { .responsive .section-originalvids .openhtml-sublayer { background-image: url("i.annihil.us/u/prod/marvel/i/mg/5/60/551c2bc0b1283.jpg"); /* Small */ } }
+                        --></style>
+                        <a href="tv/show/190/marvels_agents_of_shield." target="_blank" class="oh-link">
+                        <div class="site-container">
+                        <div class="oh-copy left">
+                        <div class="copy-img"></div>
+                        <p>Tuesdays at 9/8c on ABC!</p>
+                        <button class="btn btn-red btn-small"><span>Get Declassified</span></button></div>
+                        </div>
+                        </a>
+                        <script type="text/javascript">// <![CDATA[
+                         $(".moduColor_Light.section-originalvids").addClass("moduColor_Black").removeClass("moduColor_Light");
+                        // ]]></script>
+                        
+                      </div>
+                    </div>
+                    
+                    
+                        
+                        
+                        
+                        <style type="text/css"><!--
+                          .section-shop {
+                            background-image: url("i.annihil.us/u/prod/marvel/i/mg/3/a0/5537cd54b1477.jpg"); /* Large */
+                          }
+                          .section-shop .module-header {
+                            margin-bottom: 20px;
+                          }
+                          .section-shop .oh-copy {
+                            text-align: center;
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            bottom: 53px;
+                            top: auto;
+                            margin: 0 auto;
+                          }
+                          @media only screen and (min-width: 571px) and (max-width: 960px) {
+                            .responsive .section-shop {
+                              background-image: url("i.annihil.us/u/prod/marvel/i/mg/a/10/5537cd7ddb398.jpg"); /* Mid */
+                            }
+                          }
+                          @media only screen and (min-width: 0px) and (max-width: 570px) {
+                            .responsive .section-shop {
+                              background-image: url("i.annihil.us/u/prod/marvel/i/mg/6/50/5537cdb3c6650.jpg"); /* Small */
+                            }
+                          }
+                        --></style>
+                        <a class="oh-link" target="_blank" href="http://shop.marvel.com/agents-of-s-h-i-e-l-d/mn/1000007/?CMP=OTL-McomOHTML&amp;att=MAOSAOE_041415">
+                        <div class="module moduColor_Black big-header openhtml-sublayer custom-block section-shop">
+                        <div class="site-container">
+                        <div class="oh-copy center"><button class="btn btn-red btn-small"><span>Start Collecting</span></button></div>
+                        </div>
+                        </div>
+                        </a>
+                        <style type="text/css"><!--
+                          .section-avengers {
+                            background-color: #01060e !important;
+                            background-image: url("i.annihil.us/u/prod/marvel/i/mg/6/70/54ad8439c38a1.jpg"); /* Large */
+                          }
+                        
+                          .section-avengers .ext {
+                            background-image: url("i.annihil.us/u/prod/marvel/html_blocks_assets/logos/marvelkids.png");
+                            height: 74px;
+                            width: 106px;
+                          }
+                        
+                          @media only screen and (min-width: 571px) and (max-width: 960px) {
+                            .responsive .section-avengers {
+                              background-image: url("i.annihil.us/u/prod/marvel/i/mg/9/50/54ad845a4a66c.jpg"); /* Mid */
+                            }
+                          }
+                        
+                          @media only screen and (min-width: 0) and (max-width: 570px) {
+                            .responsive .section-avengers {
+                              background-image: url("i.annihil.us/u/prod/marvel/i/mg/c/a0/54d2464aeb9fe.jpg"); /* Small */
+                            }
+                          }
+                        --></style>
+                        <a class="oh-link" target="_blank" href="http://www.avengers.marvelkids.com/?cmpid=MarvelHPHTML_010715GoNow_Avengers">
+                        <div class="module moduColor_Black big-header openhtml-sublayer custom-block section-avengers">
+                        <div class="site-container">
+                        <h1 class="module-header">Marvel Kids: Avengers</h1>
+                        <div class="oh-copy">
+                        <p>Play games, watch videos, and explore activities all featuring Iron Man, Captain America, Thor, Hulk, Black Widow and more!</p>
+                        <button class="btn btn-red btn-small"><span>Go Now</span></button></div>
+                        <div class="ext"></div>
+                        </div>
+                        </div>
+                        </a>
+                    
+                      <!-- MU openHTML -->
+                          
+                        <style type="text/css"><!--
+                          .section-mu {
+                            background-image: url("i.annihil.us/u/prod/marvel/i/mg/6/d0/54d248a59a9d4.jpg");
+                            min-height: 500px !important;
+                          }
+                        
+                          .section-mu .oh-copy {
+                            width: 70% !important;
+                            margin: 180px auto 40px auto;
+                            text-align: center;
+                          }
+                        
+                          .section-mu .oh-copy h2 {
+                            font-size: 30px;
+                            margin: 0 auto 20px !important;
+                          }
+                        
+                          @media only screen and (min-width: 571px) and (max-width: 960px) {
+                            .responsive .section-mu {
+                              background-image: url("i.annihil.us/u/prod/marvel/i/mg/2/90/54d248c01a602.jpg");
+                            }
+                          }
+                        
+                          @media only screen and (min-width: 571px) and (max-width: 800px) {
+                            .responsive .section-mu .oh-copy {
+                              margin-top: 200px;
+                            }
+                          }
+                        
+                          @media only screen and (min-width: 0) and (max-width: 570px) {
+                            .responsive .section-mu {
+                              background-image: url("i.annihil.us/u/prod/marvel/i/mg/3/c0/54d248d47a565.jpg");
+                            }
+                        
+                            .responsive .section-mu .oh-copy {
+                              margin-top: 200px;
+                            }
+                        
+                            .responsive .section-mu .oh-copy h2 {
+                              font-size: 22px !important;
+                              padding: 0;
+                            }
+                          }
+                        --></style>
+                        <a class="oh-link" target="_blank" href="starwars?utm_source=MarvelHP&amp;utm_medium=OpenHTML&amp;utm_content=StartNow_MU&amp;utm_campaign=StarWars">
+                        <div class="module moduColor_Black big-header openhtml-sublayer custom-block section-mu">
+                        <div class="site-container">
+                        <h1 class="module-header">Marvel Unlimited</h1>
+                        <div class="oh-copy">
+                        <h2 class="sub-header">Unlock The Marvel Universe</h2>
+                        <p>Get instant access to over 15,000 Marvel Comics on web &amp; mobile, exclusive member benefits, discounts, events &amp; more!</p>
+                        <button class="btn btn-red btn-small"><span>Learn More</span></button></div>
+                        </div>
+                        </div>
+                        </a>
+                        
+                    
+  <!--[if IE 8]> <div class="marvelWidget_Container notresponsive lt-IE9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<div class="marvelWidget_Container notresponsive">
+<!--<![endif]-->
+    <div id="marvel_bottomnav_ad" class="banner-ad footer">
+    	<section class="ad-container-smart ad-box-banner"></section>
+    	<script type='text/javascript'>
+    $(function(){
+            var ad = Wonderland.register( 'ad', new Juggernaut.OO.Views.GoogleAdTag() );
+    
+            ad.init({
+                id: 'banner-ad-footer',
+                selector : '.banner-ad.footer .ad-container-smart',
+                config: {
+                    networkCode: '/10281695/Marvel.com/home/banner-ad-footer',
+                                        responsiveMap: [[ [ 980, 90 ], [ 728, 90 ] ],[ [ 0, 0 ], [ 320, 50 ] ]],
+                                                                        reportToGA: true,
+                                    targetDiv: 'div-gpt-ad-home/banner-ad-footer',
+                    targeting: {
+                        sect: 'home/banner-ad-footer'
+                    },
+                    listensForResize: true //will switch ad out on rezize, for responsive
+                }
+            });
+            ad.load();
+        });
+    </script>
+    
+    
+    </div>
+    
+        <script type="text/javascript">
+        (function() {
+           function async_load(){
+        	 	files = new Array();
+        
+                    	for(i in files) {
+        					        s = document.createElement('script');
+        					        s.type = files[i].type;
+        					        s.async = files[i].async;
+        					        s.src = files[i].src;
+        					        var x = document.getElementsByTagName('script')[0];
+        					        x.parentNode.insertBefore(s, x);
+                		}
+        		}
+        					    if (window.attachEvent) {
+        					        window.attachEvent('onload', async_load);
+        					    } else {
+        					        window.addEventListener('load', async_load, false);
+        					    }
+        					})();
+        </script>
+        
+  <div id="marvel_footer_wrapper">
+
+        <div class="marvel_footer" id="marvel_footer">
+      <div class="html_aside">
+        <h4>Comics</h4>
+        <ul>
+          <li><a href="comics/calendar/">Release Calendar</a></li>
+          <li><a href="comics/unlimited/">Marvel Unlimited</a></li>
+          <li><a href="redeem/">Redeem Digital Copy</a></li>
+          <li><a href="http://comicstore.marvel.com/">Shop Digital Comics</a></li>
+          <li><a href="http://subscriptions.marvel.com/">Print Subscriptions</a></li>
+          <li><a href="http://developer.marvel.com" class="vt-p">Developer Portal</a></li>
+
+        </ul>
+      </div>
+
+      <div class="html_aside">
+        <h4>Characters</h4>
+        <ul>
+          <li><a href="characters/bio/1009610/spider-man">Spider-Man</a></li>
+          <li><a href="characters/bio/1009165/avengers">Avengers</a></li>
+          <li><a href="characters/bio/1009368/iron_man">Iron Man</a></li>
+          <li><a href="characters/bio/1009351/hulk">Hulk</a></li>
+          <li><a href="universe/">Universe Wiki</a></li>
+        </ul>
+      </div>
+
+      <div class="html_aside">
+        <h4>Downloads</h4>
+        <ul>
+          <li><a href="mobile/">Mobile Apps</a></li>
+          <li><a href="podcasts/">Podcasts</a></li>
+          <li><a href="wallpaper/">Wallpaper</a></li>
+        </ul>
+      </div>
+
+      <div class="html_aside">
+        <h4>Kids</h4>
+        <ul>
+          <li><a href="http://www.marvelkids.com/">Marvel Kids</a></li>
+          <li><a href="http://www.marvelkids.com/games ">Kids Games</a></li>
+          <li><a href="http://www.marvelkids.com/videos">Kids Videos</a></li>
+          <li><a href="http://www.marvelkids.com/activities ">Kids Activities</a></li>
+        </ul>
+      </div>
+
+      <div class="html_aside">
+        <h4>Marvel</h4>
+        <ul>
+          <li><a class="register-link-footer" href="https://secure.marvel.com/user/register?referer=http%3A%2F%2Fmarvel.com?placement=footer">Sign Up</a></li>
+
+          <li><a href="help/">Help/FAQs</a></li>
+          <li><a href="https://marvel.com/preferences/email/">Email Preferences</a></li>
+          <li><a href="corporate/about/">About Marvel</a></li>
+          <li><a href="corporate/advertising/">Advertising</a></li>
+          <li><a href="corporate/interns/">Internships</a></li>
+          <li><a href="http://marvel.disneycareers.com/en/default/">Careers</a></li>
+        </ul>
+      </div>
+    </div>
+    
+        <div class="marvel_footer_sub_wrapper">
+        <a href="index.html" class="icon-marvel-logo"></a>
+        <h4>Follow Marvel</h4>
+        <span>
+          <a href="http://www.facebook.com/Marvel" target="_blank"><span class="icon-facebook"></span></a>
+          <a href="https://plus.google.com/+marvel/posts" target="_blank"><span class="icon-google-plus"></span></a>
+          <a href="https://twitter.com/#!/marvel" target="_blank"><span class="icon-twitter"></span></a>
+          <a href="http://marvelentertainment.tumblr.com/" target="_blank"><span class="icon-tumblr"></span></a>
+          <a href="http://www.youtube.com/marvel" target="_blank"><span class="icon-youtube"></span></a>
+          <a href="http://pinterest.com/marvelofficial/" target="_blank"><span class="icon-pinterest"></span></a>
+        </span>
+
+        <!--
+        <h4>Get the Marvel Newsletter</h4>
+        <button class="btn btn-grey btn-small" href="https://marvel.com/my_account/emailpreferences"><span>Subscribe</span></button>
+        -->
+        <!--<li class="arrow"><a href="#top">&uarr; Top</a></li>-->
+    </div>
+    
+    <div class="marvel_footer_sub_partners_wrapper">
+              <a target="_blank" href="http://disneytermsofuse.com">Terms of Use</a>
+        <a target="_blank" href="https://disneyprivacycenter.com">Privacy Policy</a>
+        <a target="_blank" href="https://disneyprivacycenter.com/notice-to-california-residents">Your California Privacy Rights</a>
+        <a target="_blank" href="https://disneyprivacycenter.com/kids-privacy-policy/english/">Children’s Online Privacy Policy</a>
+        <a target="_blank" href="corporate/license_tou">License Agreement</a>
+        <a target="_blank" href="http://preferences-mgr.truste.com/?type=marvel&affiliateId=115" onclick="window.open('http://preferences-mgr.truste.com/?type=marvel&affiliateId=115','popup','width=986,height=878,scrollbars=yes,resizable=no,toolbar=no,directories=no,location=no,menubar=no,status=no,left=0,top=0'); return false">Interest-Based Ads</a>
+        <a target="_blank" href="corporate/terms/">&copy; 2015 Marvel</a>
+                </div>
+  </div>
+</div><!--/responsive toggler wrapper-->
+
+<div class="footer_googleadservices_wrapper">
+
+  <!-- Google Code for AVX Homepage Visit Remarketing List -->
+  <script type="text/javascript">
+  /* <![CDATA[ */
+  var google_conversion_id = 951293568;
+  var google_conversion_language = "en";
+  var google_conversion_format = "3";
+  var google_conversion_color = "ffffff";
+  var google_conversion_label = "4s7QCPDyoQMQgK3OxQM";
+  var google_conversion_value = 0;
+  /* ]]> */
+  </script>
+
+  <script type="text/javascript" src="www.googleadservices.com/pagead/conversion.js"></script>
+  <noscript>
+    <div style="display:inline;">
+      <img height="1" width="1" style="border-style:none;" alt="" src="www.googleadservices.com/pagead/conversion/951293568/index.html%3Flabel=4s7QCPDyoQMQgK3OxQM&amp;guid=ON&amp;script=0"/>
+    </div>
+  </noscript>
+</div>
+
+<!-- nomdcu no cookie -->
+
+        <script type="text/javascript" src="i.annihil.us/u/prod/marvel/s/js/d38014cdb72a1f67a3ca27a7c5c61fc1.js"></script>
+        
+
+<!--  FACEBOOOK -->
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=193166954153103";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+window.fbAsyncInit = function() {
+  _ga.trackFacebook();
+};
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"77ea7d863b","applicationID":"10928807","transactionName":"b1FXYkYFWUcEBUNaClYbdFVADVhaSgJSVQRNWEEZXQpTUR1JXl0BXUw=","queueTime":0,"applicationTime":719,"atts":"QxZUFA4fSkk=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-632.min.js"}</script></body>
+</html>
