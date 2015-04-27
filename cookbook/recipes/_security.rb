@@ -18,5 +18,9 @@
 # limitations under the License.
 #
 
+# The ubuntu image comes with the ubuntu user account locked. This allows the user
+# to authenticate with keys in that situation.
+node.default['ssh']['use_pam'] = 'true'
+
 include_recipe 'os-hardening::default'
 include_recipe 'ssh-hardening::server'

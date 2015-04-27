@@ -6,8 +6,8 @@ require 'uri'
 require 'erb'
 require 'pp'
 
-# t2.* can only use ebs
-BACK    = 'ebs-ssd'
+# instance because these nodes are ephemeral
+BACK    = 'instance-store'
 
 # no need for i386 anymore
 ARCH    = 'amd64'
@@ -70,39 +70,57 @@ end
 # cloudformation-ruby-dsl can interpolate CloudFormation items in the userdata using the form:
 #   {{function(param)}}
 # We are setting the cloudformation references here for them to be interpolated at the last moment.
-def template
+def userdata_template
   <<-EOF.gsub(/^ {4}/, '')
     #!/bin/bash
 
-    # install basics
-    apt-get update
-    apt-get install git wget
+    LOG=/var/log/userdata.log
 
-    # install chef
-    wget https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/12.04/x86_64/chefdk_0.4.0-1_amd64.deb
-    dpkg -i chefdk_0.4.0-1_amd64.deb
-    rm -f chefdk_0.4.0-1_amd64.deb
+    echo "* let's have a look at the ENV"
+    env >> $LOG
 
-    # setup cookbooks
-    mkdir -p /tmp/chef_solo
-    git clone git@github.com:harlanbarnes/how-i-work.git /tmp/chef_solo
+    echo "* apt-update and setup basics" >> $LOG
+    apt-get update >> $LOG 2>&1
+    apt-get install git wget --yes >> $LOG 2>&1
 
-    # vendor cookbooks
-    cd /tmp/chef_solo/how-i-work/cookbook
-    berks vendor /tmp/chef_solo/cookbooks
+    echo "* install chefdk" >> $LOG
+    wget -q https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/12.04/x86_64/chefdk_0.4.0-1_amd64.deb >> $LOG 2>&1
+    dpkg -i chefdk_0.4.0-1_amd64.deb >> $LOG 2>&1
+    rm -f chefdk_0.4.0-1_amd64.deb >> $LOG 2>&1
 
-    # setup node configuration
+    # apparently the userdata environment is very basic so berks/ruby goes bonkers
+    echo "* setting up the environment for chefdk and missing variables"
+    eval "$(chef shell-init bash)"
+    export HOME=/root
+    export USER=root
+    export LANGUAGE=en_US.UTF-8
+    export LANG=en_US.UTF-8
+    export LC_ALL=en_US.UTF-8
+
+    echo "* setup working directory"
+    mkdir -p /tmp/chef_solo/how-i-work >> $LOG 2>&1
+
+    echo "* clone repo" >> $LOG
+    git clone https://github.com/harlanbarnes/how-i-work.git /tmp/chef_solo/how-i-work >> $LOG 2>&1
+
+    echo "* berks vendor cookbook" >> $LOG
+    cd /tmp/chef_solo/how-i-work/cookbook >> $LOG 2>&1
+    berks vendor /tmp/chef_solo/cookbooks >> $LOG 2>&1
+    cd - > /dev/null
+
+    echo "* setup node json" >> $LOG
     echo '<%= node_json %>' > /tmp/chef_solo/node.json
 
-    # setup chef solo configuration
-    mkdir -p /tmp/chef_solo/file_cache_path
+    echo "* setup chef solo configuration" >> $LOG
+    mkdir -p /tmp/chef_solo/file_cache_path >> $LOG 2>&1
     echo '
       file_cache_path "/tmp/chef_solo/file_cache_path"
       cookbook_path "/tmp/chef_solo/cookbooks"
       json_attribs "/tmp/chef_solo/node.json"
     ' > /tmp/chef_solo/solo.rb
 
-    chef-solo -c /tmp/chef_solo/solo.rb -j /tmp/chef_solo/node.json >> /var/log/chef.log 2>&1 &
+    echo "* execute chef solo" >> $LOG
+    chef-solo -c /tmp/chef_solo/solo.rb -j /tmp/chef_solo/node.json >> $LOG 2>&1 &
   EOF
 end
 
@@ -115,7 +133,7 @@ def userdata(type)
 
     # for lack of service discovery, we "ask" the CloudFormation template to give us the private DNS
     # name of the application instances we want to proxy.
-    node['run_list'] = %w(recipe[sample::web])
+    node['run_list'] = %w(recipe[simple::web])
     node['web']['backends'] = []
 
     COUNT[:app].times do |index|
@@ -124,12 +142,12 @@ def userdata(type)
     end
   when 'app'
     node['app'] = {}
-    node['run_list'] = %w(recipe[sample::app])
+    node['run_list'] = %w(recipe[simple::app])
   end
 
   node_json = JSON.generate(node)
   begin
-    result = ERB.new(template, 3, '>').result(binding)
+    result = ERB.new(userdata_template, 3, '>').result(binding)
   rescue Exception => e
     raise "Could not create userdata from template: #{e}"
   end
@@ -177,10 +195,10 @@ template do
       resource "app#{index}", Type: 'AWS::EC2::Instance',
         Properties: {
           ImageId: image_id('trusty', aws_region),
-          InstanceType: 't2.micro',
+          InstanceType: 'm1.small',
           SecurityGroupIds: [ref('SimpleSecurityGroup')],
           KeyName: KEYPAIR,
-          UserData: base64(interpolate(userdata(app))),
+          UserData: base64(interpolate(userdata('app'))),
           Tags: [
             { Key: 'Name', Value: "app#{index}" }
           ]
@@ -192,13 +210,16 @@ template do
       resource "web#{index}", Type: 'AWS::EC2::Instance',
         Properties: {
           ImageId: image_id('trusty', aws_region),
-          InstanceType: 't2.micro',
+          InstanceType: 'm1.small',
           SecurityGroupIds: [ref('SimpleSecurityGroup')],
           KeyName: KEYPAIR,
-          UserData: base64(interpolate(userdata(web))),
+          UserData: base64(interpolate(userdata('web'))),
           Tags: [
             { Key: 'Name', Value: "web#{index}" }
           ]
         }
     end
+
+    output 'URL', Description: 'URL to access application',
+      Value: join('', 'http://', get_att('web1', 'PublicDnsName'))
 end.exec!
