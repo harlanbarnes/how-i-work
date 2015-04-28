@@ -32,9 +32,13 @@ def index(release)
   uri = URI.parse(url)
 
   begin
-    response = Net::HTTP.get_response uri
-  rescue
-    raise "Could not fetch url: #{url}"
+    http = Net::HTTP.new(uri.host, uri.port)
+    http.use_ssl = (uri.scheme == 'https')
+    request = Net::HTTP::Get.new(url)
+    response = http.start { |http| http.request(request) }
+    fail 'Non-200 response' if response.code != 200
+  rescue Exception => e
+    raise "Could not fetch url #{url}: #{e}"
   end
 
   @index[release] = response.body
@@ -48,25 +52,29 @@ def image_id(release, region)
 
   # There's a nuance to the data that's not obvious here. The image id list at Ubuntu's site is
   # ordered so that the latest releases are added to the bottom. Thus, we will pick up the latest
-  # release number (rel_num below) on each pass.
+  # release number (_rel_num below) on each pass.
   index(release).split(/\n/).each do |line|
+    line.chomp!
     _rel,
-    _rel_type,
-    _rel_stage,
+    rel_type,
+    rel_stage,
     _rel_num,
     rel_backing,
     rel_arch,
     rel_region,
     rel_id,
     _rel_kernel,
-    _rel_vmtype = line.split(/\t/)
-    next unless rel_region == region && rel_arch == ARCH &&
-                rel_backing == BACK  && rel_vmtype == VMTYPE
+    _nothing,
+    rel_vmtype = line.split(/\t/)
+    next unless rel_type    == 'server'  && rel_stage  == 'release' &&
+                rel_region  == region    && rel_arch   == ARCH      &&
+                rel_backing == BACK      && rel_vmtype == VMTYPE
     id = rel_id
   end
 
   id
 end
+
 # cloudformation-ruby-dsl can interpolate CloudFormation items in the userdata using the form:
 #   {{function(param)}}
 # We are setting the cloudformation references here for them to be interpolated at the last moment.
