@@ -36,7 +36,7 @@ def index(release)
     http.use_ssl = (uri.scheme == 'https')
     request = Net::HTTP::Get.new(url)
     response = http.start { |http| http.request(request) }
-    fail 'Non-200 response' if response.code != 200
+    fail 'Non-200 response' if response.code != '200'
   rescue Exception => e
     raise "Could not fetch url #{url}: #{e}"
   end
