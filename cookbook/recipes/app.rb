@@ -51,7 +51,7 @@ end
 include_recipe 'simple::_nginx'
 
 template "#{node['nginx']['dir']}/sites-available/simple-site" do
-  group  node['root_group']
+  group node['root_group']
 end
 
 nginx_site 'simple-site' do

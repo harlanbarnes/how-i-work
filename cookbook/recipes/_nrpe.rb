@@ -55,5 +55,3 @@ nrpe_check "check_ssh" do
   parameters "localhost"
   action :add
 end
-
-

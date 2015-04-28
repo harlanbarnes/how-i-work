@@ -16,7 +16,7 @@ ARCH    = 'amd64'
 VMTYPE  = 'paravirtual'
 
 # keypair to use for ubuntu user
-KEYPAIR = 'hbarnes'
+KEYPAIR = ENV['AWS_KEYPAIR_NAME'] || 'hbarnes'
 
 # instance mapping/count for later expansion
 COUNT = {
@@ -50,18 +50,18 @@ def image_id(release, region)
   # ordered so that the latest releases are added to the bottom. Thus, we will pick up the latest
   # release number (rel_num below) on each pass.
   index(release).split(/\n/).each do |line|
-    rel,
-    rel_type,
-    rel_stage,
-    rel_num,
+    _rel,
+    _rel_type,
+    _rel_stage,
+    _rel_num,
     rel_backing,
     rel_arch,
     rel_region,
     rel_id,
-    rel_kernel,
-    rel_vmtype = line.split(/\t/)
+    _rel_kernel,
+    _rel_vmtype = line.split(/\t/)
     next unless rel_region == region && rel_arch == ARCH &&
-                rel_backing == BACK  && rel_vmtype = VMTYPE
+                rel_backing == BACK  && rel_vmtype == VMTYPE
     id = rel_id
   end
 
@@ -137,7 +137,7 @@ def userdata(type)
     node['web']['backends'] = []
 
     COUNT[:app].times do |index|
-      index +=1
+      index += 1
       node['web']['backends'].push("{{get_att('app#{index}', 'PrivateDnsName')}}")
     end
   when 'app'
@@ -148,7 +148,7 @@ def userdata(type)
   node_json = JSON.generate(node)
   begin
     result = ERB.new(userdata_template, 3, '>').result(binding)
-  rescue Exception => e
+  rescue StandardError => e
     raise "Could not create userdata from template: #{e}"
   end
 end
@@ -189,37 +189,38 @@ template do
       Tags: [{ Key: 'Name', Value: 'default-simple' }]
     }
 
+  COUNT[:app].times do |index|
+    index += 1
+    resource "app#{index}",
+      Type: 'AWS::EC2::Instance',
+      Properties: {
+        ImageId: image_id('trusty', aws_region),
+        InstanceType: 'm1.small',
+        SecurityGroupIds: [ref('SimpleSecurityGroup')],
+        KeyName: KEYPAIR,
+        UserData: base64(interpolate(userdata('app'))),
+        Tags: [
+          { Key: 'Name', Value: "app#{index}" }
+        ]
+      }
+  end
 
-    COUNT[:app].times do |index|
-      index += 1
-      resource "app#{index}", Type: 'AWS::EC2::Instance',
-        Properties: {
-          ImageId: image_id('trusty', aws_region),
-          InstanceType: 'm1.small',
-          SecurityGroupIds: [ref('SimpleSecurityGroup')],
-          KeyName: KEYPAIR,
-          UserData: base64(interpolate(userdata('app'))),
-          Tags: [
-            { Key: 'Name', Value: "app#{index}" }
-          ]
-        }
-    end
+  COUNT[:web].times do |index|
+    index += 1
+    resource "web#{index}",
+      Type: 'AWS::EC2::Instance',
+      Properties: {
+        ImageId: image_id('trusty', aws_region),
+        InstanceType: 'm1.small',
+        SecurityGroupIds: [ref('SimpleSecurityGroup')],
+        KeyName: KEYPAIR,
+        UserData: base64(interpolate(userdata('web'))),
+        Tags: [
+          { Key: 'Name', Value: "web#{index}" }
+        ]
+      }
+  end
 
-    COUNT[:web].times do |index|
-      index += 1
-      resource "web#{index}", Type: 'AWS::EC2::Instance',
-        Properties: {
-          ImageId: image_id('trusty', aws_region),
-          InstanceType: 'm1.small',
-          SecurityGroupIds: [ref('SimpleSecurityGroup')],
-          KeyName: KEYPAIR,
-          UserData: base64(interpolate(userdata('web'))),
-          Tags: [
-            { Key: 'Name', Value: "web#{index}" }
-          ]
-        }
-    end
-
-    output 'URL', Description: 'URL to access application',
-      Value: join('', 'http://', get_att('web1', 'PublicDnsName'))
+  output 'URL', Description: 'URL to access application',
+    Value: join('', 'http://', get_att('web1', 'PublicDnsName'))
 end.exec!

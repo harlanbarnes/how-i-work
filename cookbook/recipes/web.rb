@@ -25,7 +25,7 @@ include_recipe 'apt::default'
 include_recipe 'simple::_nginx'
 
 template "#{node['nginx']['dir']}/sites-available/simple-proxy" do
-  group  node['root_group']
+  group node['root_group']
   notifies :reload, 'service[nginx]'
 end
 
